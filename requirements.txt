@@ -5,5 +5,11 @@ branca>=0.7
 plotly>=5.18
 pandas>=1.5
 numpy>=1.23
+scipy>=1.9
 scikit-learn>=1.1
+pillow>=9.0
 packaging
+
+# Only for re-running the Earth Engine scan (discovery/gee_scan.py) and the region / country lookup
+# in discovery/place_names.py; the app itself does not need it:
+# earthengine-api>=1.0

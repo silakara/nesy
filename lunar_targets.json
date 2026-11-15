@@ -1,40 +1,59 @@
 {
   "metadata": {
-    "project": "Nesy (NASA Space Apps 2026)",
-    "version": "1.0",
-    "description": "Baseline target-zone parameters (ideal + acceptable range) used to rank terrestrial analog sites.",
-    "disclaimer": "Values are literature-informed engineering baselines, rounded and harmonised to the Earth-candidate feature definitions. Re-derive final numbers from the PDS products (LOLA, Diviner, M3, Mini-RF, CRaTER) at your chosen baseline/resolution before publication.",
+    "project": "ARTEMIS-SHIELD (NASA Space Apps 2026)",
+    "version": "1.1",
+    "description": "Baseline lunar target-zone parameters calibrated from NASA PDS / LRO QuickMap orbital datasets, used to rank terrestrial analog sites.",
+    "disclaimer": "Target parameters are calibrated from LRO QuickMap spatial statistics (LOLA, Diviner, M3, Lunar Prospector) and harmonised to Earth-candidate feature definitions.",
     "data_sources": {
       "LOLA": "LRO Lunar Orbiter Laser Altimeter - slope, roughness, topography, 1064 nm normal albedo (PDS Geosciences Node)",
-      "Diviner": "LRO Diviner Lunar Radiometer - surface temperature, diurnal range, thermal inertia / rock abundance",
-      "M3": "Chandrayaan-1 Moon Mineralogy Mapper - pyroxene/olivine band parameters, 2.8-3.0 um hydration band depth",
+      "Diviner": "LRO Diviner Lunar Radiometer - bolometric & regolith temperature, diurnal/seasonal range, thermal inertia / rock abundance",
+      "M3": "Chandrayaan-1 Moon Mineralogy Mapper - pyroxene/olivine 1 um & 2 um band parameters",
+      "Lunar Prospector": "Lunar Prospector Gamma-Ray & Neutron Spectrometer - FeO wt% abundance and deconvolved hydrogen (ug/g)",
       "Mini-RF": "LRO Mini-RF S-band radar - circular polarization ratio (CPR) used as subsurface ice / blockiness indicator",
-      "CRaTER": "LRO Cosmic Ray Telescope for the Effects of Radiation - surface GCR dose-rate",
-      "Mars benchmark": "MRO CRISM / HiRISE / MOLA / THEMIS and MSL-RAD (Jezero via Mars 2020 landing-site analyses)"
+      "CRaTER": "LRO Cosmic Ray Telescope for the Effects of Radiation - surface GCR dose-rate"
     },
     "feature_definitions": {
       "slope_deg": "Mean surface slope [deg]",
       "tri_m": "Terrain Ruggedness Index [m]",
-      "delta_t_k": "Diurnal surface temperature amplitude (Tmax - Tmin) [K]",
+      "delta_t_k": "Surface temperature amplitude (Tmax - Tmin) [K]",
       "mafic_index": "Dimensionless mafic/felsic ratio proxy (1.00 = felsic/anorthositic baseline, >1.3 = basaltic)",
-      "clay_hydrated_index": "Normalised 0-1 hydration / phyllosilicate band-depth index (M3 2.8-3.0 um on Moon; CRISM on Mars)",
+      "clay_hydrated_index": "Normalised hydration / phyllosilicate band-depth index",
       "subsurface_ice_moisture": "Volumetric/weight-fraction proxy for near-surface water ice or moisture (0-1)",
       "albedo": "Normal-incidence broadband albedo (0-1)",
       "thermal_inertia_proxy": "Thermal inertia [J m^-2 K^-1 s^-1/2]",
       "radiation_flux_msv_yr": "Surface galactic-cosmic-ray (GCR) effective dose, unshielded [mSv/yr]"
     },
-    "similarity_features": ["slope_deg", "tri_m", "delta_t_k", "mafic_index", "clay_hydrated_index", "subsurface_ice_moisture", "albedo", "thermal_inertia_proxy"]
+    "similarity_features": [
+      "slope_deg",
+      "tri_m",
+      "delta_t_k",
+      "mafic_index",
+      "clay_hydrated_index",
+      "subsurface_ice_moisture",
+      "albedo",
+      "thermal_inertia_proxy"
+    ]
   },
   "targets": {
     "Shackleton Ridge": {
       "body": "Moon",
-      "region": "Lunar South Pole",
-      "center_lat": -89.54,
-      "center_lon": 129.78,
-      "scientific_context": "Near-permanently illuminated rim ridge adjacent to a permanently shadowed crater; anorthositic highlands with water-ice potential in nearby cold traps.",
+      "region": "Lunar South Pole - Shackleton Rim Ridge",
+      "center_lat": -89.1701,
+      "center_lon": -137.0404,
+      "scientific_context": "Near-permanently illuminated rim ridge adjacent to a permanently shadowed crater; anorthositic highlands (FeO 6.5 wt%) with elevated deconvolved hydrogen (94.2 ug/g) indicating water-ice potential in nearby cold traps.",
+      "quickmap_reference": {
+        "source": "NASA LRO QuickMap (5000x5000m @ -89.17N, -137.04E)",
+        "feo_wt_pct": 6.5,
+        "hydrogen_ug_g": 94.2,
+        "summer_max_temp_k": 264.5,
+        "winter_min_temp_k": 64.9,
+        "mean_slope_deg": 15.57,
+        "roughness_100m": 1.019,
+        "mean_elevation_m": 90.0
+      },
       "environment": {
         "gravity_m_s2": 1.62,
-        "mean_surface_temp_k": 190,
+        "mean_surface_temp_k": 132.5,
         "effective_sky_temp_k": 3,
         "convective_h_w_m2k": 0.0,
         "atmospheric_column_g_cm2": 0.0,
@@ -45,26 +64,35 @@
         "friction_angle_deg": 35
       },
       "parameters": {
-        "slope_deg":               {"ideal": 12.0,  "min": 5.0,   "max": 20.0,  "unit": "deg",         "source": "LOLA"},
-        "tri_m":                   {"ideal": 8.0,   "min": 3.0,   "max": 15.0,  "unit": "m",           "source": "LOLA"},
-        "delta_t_k":               {"ideal": 120.0, "min": 60.0,  "max": 200.0, "unit": "K",           "source": "Diviner"},
-        "mafic_index":             {"ideal": 1.08,  "min": 1.00,  "max": 1.20,  "unit": "ratio",       "source": "M3"},
-        "clay_hydrated_index":     {"ideal": 0.12,  "min": 0.03,  "max": 0.30,  "unit": "index 0-1",   "source": "M3"},
-        "subsurface_ice_moisture": {"ideal": 0.04,  "min": 0.01,  "max": 0.10,  "unit": "fraction",    "source": "Mini-RF / LCROSS"},
-        "albedo":                  {"ideal": 0.20,  "min": 0.12,  "max": 0.32,  "unit": "0-1",         "source": "LOLA 1064 nm"},
-        "thermal_inertia_proxy":   {"ideal": 55.0,  "min": 35.0,  "max": 110.0, "unit": "J m-2 K-1 s-1/2", "source": "Diviner"},
-        "radiation_flux_msv_yr":   {"ideal": 310.0, "min": 260.0, "max": 360.0, "unit": "mSv/yr",      "source": "CRaTER"}
+        "slope_deg":               {"ideal": 15.57, "min": 4.0,   "max": 22.0,  "unit": "deg",             "source": "LOLA / DEM (QuickMap TerrainSlope mean)"},
+        "tri_m":                   {"ideal": 20.0,  "min": 8.0,   "max": 35.0,  "unit": "m",               "source": "LOLA / DEM (QuickMap Roughness 1.019)"},
+        "delta_t_k":               {"ideal": 199.6, "min": 80.0,  "max": 210.0, "unit": "K",               "source": "Diviner (Summer max 264.5 K - Winter min 64.9 K)"},
+        "mafic_index":             {"ideal": 1.40,  "min": 1.15,  "max": 1.65,  "unit": "ratio",           "source": "Lunar Prospector FeO 6.5 wt% / M3 1um depth 0.107"},
+        "clay_hydrated_index":     {"ideal": 1.00,  "min": 0.70,  "max": 1.25,  "unit": "index 0-1",       "source": "M3"},
+        "subsurface_ice_moisture": {"ideal": 0.06,  "min": 0.02,  "max": 0.12,  "unit": "fraction",        "source": "Lunar Prospector H (94.2 ug/g) / Mini-RF"},
+        "albedo":                  {"ideal": 0.22,  "min": 0.15,  "max": 0.32,  "unit": "0-1",             "source": "LOLA 1064 nm"},
+        "thermal_inertia_proxy":   {"ideal": 55.0,  "min": 30.0,  "max": 95.0,  "unit": "J m-2 K-1 s-1/2", "source": "Diviner"},
+        "radiation_flux_msv_yr":   {"ideal": 310.0, "min": 260.0, "max": 360.0, "unit": "mSv/yr",          "source": "CRaTER"}
       }
     },
     "Malapert Mountain": {
       "body": "Moon",
-      "region": "Lunar South Pole",
-      "center_lat": -85.99,
-      "center_lon": 0.12,
-      "scientific_context": "Massif with high solar illumination fraction and line-of-sight to Earth; highland terrain, candidate for power + comms outposts.",
+      "region": "Lunar South Pole - Malapert Massif",
+      "center_lat": -85.9900,
+      "center_lon": -2.9300,
+      "scientific_context": "Elevated polar massif (4,637 m mean elevation) with high solar illumination fraction and continuous direct-to-Earth line-of-sight; highland terrain (FeO 6.14 wt%), prime candidate for power + comms relay outposts.",
+      "quickmap_reference": {
+        "source": "NASA LRO QuickMap (5000x5000m @ -85.99N, -2.93E)",
+        "feo_wt_pct": 6.14,
+        "summer_max_temp_k": 258.3,
+        "winter_min_temp_k": 65.6,
+        "mean_slope_deg": 15.05,
+        "roughness_100m": 0.927,
+        "mean_elevation_m": 4636.8
+      },
       "environment": {
         "gravity_m_s2": 1.62,
-        "mean_surface_temp_k": 215,
+        "mean_surface_temp_k": 164.7,
         "effective_sky_temp_k": 3,
         "convective_h_w_m2k": 0.0,
         "atmospheric_column_g_cm2": 0.0,
@@ -75,23 +103,23 @@
         "friction_angle_deg": 35
       },
       "parameters": {
-        "slope_deg":               {"ideal": 9.0,   "min": 4.0,   "max": 16.0,  "unit": "deg",         "source": "LOLA"},
-        "tri_m":                   {"ideal": 6.0,   "min": 2.0,   "max": 12.0,  "unit": "m",           "source": "LOLA"},
-        "delta_t_k":               {"ideal": 140.0, "min": 90.0,  "max": 220.0, "unit": "K",           "source": "Diviner"},
-        "mafic_index":             {"ideal": 1.10,  "min": 1.00,  "max": 1.22,  "unit": "ratio",       "source": "M3"},
-        "clay_hydrated_index":     {"ideal": 0.10,  "min": 0.02,  "max": 0.25,  "unit": "index 0-1",   "source": "M3"},
-        "subsurface_ice_moisture": {"ideal": 0.02,  "min": 0.00,  "max": 0.06,  "unit": "fraction",    "source": "Mini-RF"},
-        "albedo":                  {"ideal": 0.17,  "min": 0.11,  "max": 0.26,  "unit": "0-1",         "source": "LOLA 1064 nm"},
-        "thermal_inertia_proxy":   {"ideal": 52.0,  "min": 35.0,  "max": 90.0,  "unit": "J m-2 K-1 s-1/2", "source": "Diviner"},
-        "radiation_flux_msv_yr":   {"ideal": 320.0, "min": 270.0, "max": 370.0, "unit": "mSv/yr",      "source": "CRaTER"}
+        "slope_deg":               {"ideal": 15.05, "min": 5.0,   "max": 25.0,  "unit": "deg",             "source": "LOLA / DEM (QuickMap TerrainSlope mean)"},
+        "tri_m":                   {"ideal": 25.0,  "min": 10.0,  "max": 45.0,  "unit": "m",               "source": "LOLA / DEM (QuickMap TerrainHeight sdev 279 m)"},
+        "delta_t_k":               {"ideal": 192.7, "min": 90.0,  "max": 225.0, "unit": "K",               "source": "Diviner (Summer max 258.3 K - Winter min 65.6 K)"},
+        "mafic_index":             {"ideal": 1.38,  "min": 1.10,  "max": 1.60,  "unit": "ratio",           "source": "Lunar Prospector FeO 6.14 wt% / M3 1um depth 0.136"},
+        "clay_hydrated_index":     {"ideal": 0.98,  "min": 0.70,  "max": 1.25,  "unit": "index 0-1",       "source": "M3"},
+        "subsurface_ice_moisture": {"ideal": 0.04,  "min": 0.01,  "max": 0.09,  "unit": "fraction",        "source": "Mini-RF"},
+        "albedo":                  {"ideal": 0.24,  "min": 0.16,  "max": 0.34,  "unit": "0-1",             "source": "LOLA 1064 nm"},
+        "thermal_inertia_proxy":   {"ideal": 60.0,  "min": 35.0,  "max": 105.0, "unit": "J m-2 K-1 s-1/2", "source": "Diviner"},
+        "radiation_flux_msv_yr":   {"ideal": 320.0, "min": 270.0, "max": 370.0, "unit": "mSv/yr",          "source": "CRaTER"}
       }
     },
     "Marius Hills": {
       "body": "Moon",
       "region": "Oceanus Procellarum - Lunar Skylight / Volcanic Complex",
-      "center_lat": 14.09,
-      "center_lon": -56.76,
-      "scientific_context": "Volcanic dome/rille complex with a confirmed skylight (pit) into a probable lava tube; basaltic mare, equatorial thermal regime.",
+      "center_lat": 14.0917,
+      "center_lon": -56.7701,
+      "scientific_context": "Volcanic dome/rille complex with a confirmed skylight pit (52 m inner diameter, 40 m depth) into an intact lava tube; iron-rich basaltic mare (FeO 21.4 wt%), equatorial thermal regime.",
       "quickmap_reference": {
         "source": "NASA LRO QuickMap (5000x5000m @ 14.09N, -56.76E)",
         "feo_wt_pct": 21.4,
@@ -113,45 +141,15 @@
         "friction_angle_deg": 35
       },
       "parameters": {
-        "slope_deg":               {"ideal": 2.72,  "min": 0.5,   "max": 8.5,   "unit": "deg",         "source": "LOLA / DEM (QuickMap TerrainSlope mean)"},
-        "tri_m":                   {"ideal": 23.4,  "min": 5.0,   "max": 35.0,  "unit": "m",           "source": "LOLA / DEM (QuickMap TerrainHeight sdev)"},
-        "delta_t_k":               {"ideal": 291.2, "min": 120.0, "max": 310.0, "unit": "K",           "source": "Diviner (QuickMap Temperature Range dT)"},
-        "mafic_index":             {"ideal": 1.85,  "min": 1.45,  "max": 2.20,  "unit": "ratio",       "source": "Lunar Prospector FeO 21.4 wt% / M3 1um depth 0.0935"},
-        "clay_hydrated_index":     {"ideal": 0.95,  "min": 0.70,  "max": 1.15,  "unit": "index 0-1",   "source": "M3 (anhydrous mare basalt)"},
-        "subsurface_ice_moisture": {"ideal": 0.02,  "min": 0.005, "max": 0.06,  "unit": "fraction",    "source": "Mini-RF"},
-        "albedo":                  {"ideal": 0.11,  "min": 0.07,  "max": 0.18,  "unit": "0-1",         "source": "LOLA 1064 nm"},
+        "slope_deg":               {"ideal": 2.72,  "min": 0.5,   "max": 8.5,   "unit": "deg",             "source": "LOLA / DEM (QuickMap TerrainSlope mean)"},
+        "tri_m":                   {"ideal": 23.4,  "min": 5.0,   "max": 35.0,  "unit": "m",               "source": "LOLA / DEM (QuickMap TerrainHeight sdev)"},
+        "delta_t_k":               {"ideal": 291.2, "min": 120.0, "max": 310.0, "unit": "K",               "source": "Diviner (QuickMap Temperature Range dT)"},
+        "mafic_index":             {"ideal": 1.85,  "min": 1.45,  "max": 2.20,  "unit": "ratio",           "source": "Lunar Prospector FeO 21.4 wt% / M3 1um depth 0.0935"},
+        "clay_hydrated_index":     {"ideal": 0.95,  "min": 0.70,  "max": 1.15,  "unit": "index 0-1",       "source": "M3 (anhydrous mare basalt)"},
+        "subsurface_ice_moisture": {"ideal": 0.02,  "min": 0.005, "max": 0.06,  "unit": "fraction",        "source": "Mini-RF"},
+        "albedo":                  {"ideal": 0.11,  "min": 0.07,  "max": 0.18,  "unit": "0-1",             "source": "LOLA 1064 nm"},
         "thermal_inertia_proxy":   {"ideal": 45.0,  "min": 30.0,  "max": 70.0,  "unit": "J m-2 K-1 s-1/2", "source": "Diviner (night Tmin 98.66 K, dT 291.2 K)"},
-        "radiation_flux_msv_yr":   {"ideal": 380.0, "min": 320.0, "max": 440.0, "unit": "mSv/yr",      "source": "CRaTER"}
-      }
-    },
-    "Jezero Crater Rim": {
-      "body": "Mars",
-      "region": "Isidis Planitia margin - Mars Benchmark",
-      "center_lat": 18.38,
-      "center_lon": 77.58,
-      "scientific_context": "Mars 2020 landing-site crater rim: olivine-carbonate and Fe/Mg-smectite bearing, ancient delta/lake system; benchmark for hydrated-mineral analogs.",
-      "environment": {
-        "gravity_m_s2": 3.71,
-        "mean_surface_temp_k": 225,
-        "effective_sky_temp_k": 180,
-        "convective_h_w_m2k": 2.0,
-        "atmospheric_column_g_cm2": 16,
-        "spe_design_dose_msv_yr": 1500,
-        "spe_attenuation_length_g_cm2": 25,
-        "dose_limit_msv_yr": 50,
-        "regolith_cohesion_kpa": 1.0,
-        "friction_angle_deg": 33
-      },
-      "parameters": {
-        "slope_deg":               {"ideal": 12.0,  "min": 5.0,   "max": 25.0,  "unit": "deg",         "source": "MOLA / HiRISE DTM"},
-        "tri_m":                   {"ideal": 9.0,   "min": 3.0,   "max": 18.0,  "unit": "m",           "source": "MOLA / HiRISE DTM"},
-        "delta_t_k":               {"ideal": 90.0,  "min": 65.0,  "max": 115.0, "unit": "K",           "source": "THEMIS / REMS"},
-        "mafic_index":             {"ideal": 1.35,  "min": 1.20,  "max": 1.60,  "unit": "ratio",       "source": "CRISM"},
-        "clay_hydrated_index":     {"ideal": 0.55,  "min": 0.35,  "max": 0.80,  "unit": "index 0-1",   "source": "CRISM"},
-        "subsurface_ice_moisture": {"ideal": 0.02,  "min": 0.00,  "max": 0.06,  "unit": "fraction",    "source": "SHARAD / GRS / DAN"},
-        "albedo":                  {"ideal": 0.20,  "min": 0.12,  "max": 0.28,  "unit": "0-1",         "source": "TES / CRISM"},
-        "thermal_inertia_proxy":   {"ideal": 250.0, "min": 150.0, "max": 350.0, "unit": "J m-2 K-1 s-1/2", "source": "THEMIS / TES"},
-        "radiation_flux_msv_yr":   {"ideal": 233.0, "min": 200.0, "max": 270.0, "unit": "mSv/yr",      "source": "MSL-RAD"}
+        "radiation_flux_msv_yr":   {"ideal": 380.0, "min": 320.0, "max": 440.0, "unit": "mSv/yr",          "source": "CRaTER"}
       }
     }
   }

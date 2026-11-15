@@ -6,3 +6,10 @@ __pycache__/
 # Discovery scan: large intermediate output (regenerate with python discovery/scan.py) and run logs
 discovery/barren_cells_coarse.csv
 *.log
+
+# Earth Engine world scan: raw cells (~390 MB, regenerate with python discovery/gee_scan.py), pilot run,
+# and the GeoNames town list (download cities1000.zip from download.geonames.org/export/dump/)
+discovery/gee_cells.csv
+discovery/gee_cells_pilot.csv
+discovery/gee_ranked_pilot.csv
+discovery/geonames/cities1000.zip

@@ -1,20 +1,21 @@
-# center = -137.086957,-89.359908
-# size (m) = 4378.068587,3136.72579
-# pixel scale (m/px) = 17.10183,17.10183
+# center = -137.040359,-89.170108
+# size (m) = 5000,5000
+# pixel scale (m/px) = 19.53125,19.53125
 
 source,sourceId,units,min,max,mean,sdev
-Deconvolved Hydrogen Map [0.5deg bin],lp_h,ug/g,120.483,165.691,161.432,6.87638
+Deconvolved Hydrogen Map [0.5deg bin],lp_h,ug/g,88.0432,151.828,94.2025,18.7503
+Kaguya Optical Maturity (OMAT),lk_oma,unitless,-inf,-inf,-inf,-inf
 H-Parameter Map,dlre_hparam,m,-inf,-inf,-inf,-inf
 LP Iron Abundance [0.5° bin] (FeO wt%),lp_fe,wt%,6.5,6.5,6.5,0
-M3 1um depth,lm3_gp_1umbd_a,unitless,0.00606346,0.341806,0.120346,0.0984621
-M3 2um center,lm3_gp_2umbc,nm,1802.45,2168.75,1966.43,128.77
-Polar Summer Avg Temp,dlre_ptsavg,K,88.9727,177.124,142.407,16.3783
-Polar Summer Max Temp,dlre_ptsmax,K,165.079,272.623,240.201,20.4759
-Polar Summer Min Temp,dlre_ptsmin,K,52.9007,81.0565,71.9133,5.47625
-Polar Winter Avg Temp,dlre_ptwavg,K,77.3829,165.905,129.365,19.5294
-Polar Winter Max Temp,dlre_ptwmax,K,134.474,267.611,230.533,22.496
-Polar Winter Min Temp,dlre_ptwmin,K,42.0191,74.0862,61.474,7.01103
-Roughness at 100m,ldrm_16,unitless,0.715,3.093,1.53492,0.422938
-TerrainHeight,qts_demstack,m,1318.02,1900.08,1647.47,109.482
-TerrainPixelScale,qts_demstack_res,mpp,2,5,4.14596,1.34356
-TerrainSlope,qts_demstack_slope,deg,0.042287,32.0646,11.3444,4.66783
+M3 1um depth,lm3_gp_1umbd_a,unitless,0.0575063,0.305552,0.106849,0.0592525
+M3 2um center,lm3_gp_2umbc,nm,1831.13,2470.59,2085.37,199.168
+Polar Summer Avg Temp,dlre_ptsavg,K,99.9973,158.591,132.497,14.6816
+Polar Summer Max Temp,dlre_ptsmax,K,215.756,288.811,264.531,17.2034
+Polar Summer Min Temp,dlre_ptsmin,K,57.6862,82.9757,71.9382,6.06099
+Polar Winter Avg Temp,dlre_ptwavg,K,96.0497,160.296,127.792,13.0935
+Polar Winter Max Temp,dlre_ptwmax,K,200.804,287.945,257.468,18.4692
+Polar Winter Min Temp,dlre_ptwmin,K,51.2657,75.7273,64.9053,5.62425
+Roughness at 100m,ldrm_16,unitless,0.559,2.071,1.01909,0.226986
+TerrainHeight,qts_demstack,m,-564.99,914.3,90.0053,352.752
+TerrainPixelScale,qts_demstack_res,mpp,5,5,5,0
+TerrainSlope,qts_demstack_slope,deg,0.0797049,30.504,15.5747,4.83666

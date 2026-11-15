@@ -1,7 +1,7 @@
 
 
 """
-Nesy — Planetary Analog Discovery & Engineering Transfer Suite
+NESY — Planetary Analog Discovery & Engineering Transfer Suite
 NASA Space Apps Challenge 2026
 =======================================================================
 
@@ -42,7 +42,7 @@ from twin_ui import render_terrain_twin
 # Page Config & Custom Aerospace Styling
 # --------------------------------------------------------------------------- #
 st.set_page_config(
-    page_title="Nesy | Planetary Analog Engineering Suite",
+    page_title="NESY | Planetary Analog Engineering Suite",
     page_icon="🛰️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -121,8 +121,7 @@ BREAK_LABELS = {
 
 VERDICT_ICON = {
     "Valid": "✅ Valid",
-    "Partial": "🟡 Partial",
-    "Weak": "🔴 Weak",
+    "Not valid": "❌ Not valid",
     "Unknown": "⚪ Unknown",
 }
 
@@ -482,7 +481,7 @@ def build_regional_comparison_chart(scored_valid: pd.DataFrame) -> go.Figure:
         barmode="group",
         template="plotly_dark",
         color_discrete_sequence=["#38bdf8", "#f97316", "#10b981", "#a855f7"],
-        labels={"macro_region": "Macro-Region Champion", "Subscore": "Domain Fidelity Score (0–100)"},
+        labels={"macro_region": "Macro-Region Champion", "Subscore": "Domain Similarity Score (0–100)"},
     )
     fig.update_layout(
         paper_bgcolor="rgba(0,0,0,0)",
@@ -498,7 +497,7 @@ def build_regional_comparison_chart(scored_valid: pd.DataFrame) -> go.Figure:
 # Main Application
 # --------------------------------------------------------------------------- #
 def main() -> None:
-    st.title("🛰️ Nesy")
+    st.title("🛰️ NESY")
     st.caption(
         "Multi-Agency Orbital Fusion, Terrestrial Analog Discovery & Engineering Scaling Suite · NASA Space Apps Challenge 2026"
     )
@@ -622,15 +621,16 @@ def main() -> None:
         st.session_state["_last_click"] = None
     st.session_state["selected_id"] = sel_idx
 
-    st.subheader("🌍 Global Candidate Discovery Map")
-    fmap = build_map(shown, sel_idx, target_name, zoom_to_selected=zoom_to_selected)
-    map_data = st_folium(
-        fmap,
-        height=500,
-        use_container_width=True,
-        key=f"map_{st.session_state.get('map_epoch', 0)}",
-        returned_objects=["last_object_clicked"],
-    )
+    # Every section below is a collapsible block that starts open.
+    with st.expander("🌍 Global Candidate Discovery Map", expanded=True):
+        fmap = build_map(shown, sel_idx, target_name, zoom_to_selected=zoom_to_selected)
+        map_data = st_folium(
+            fmap,
+            height=500,
+            use_container_width=True,
+            key=f"map_{st.session_state.get('map_epoch', 0)}",
+            returned_objects=["last_object_clicked"],
+        )
     click = (map_data or {}).get("last_object_clicked")
     if click and click.get("lat") is not None:
         ckey = (round(float(click["lat"]), 6), round(float(click["lng"]), 6))
@@ -645,198 +645,187 @@ def main() -> None:
     render_terrain_twin(row, target_name, body)
 
     # ---- Candidate Engineering Deep-Dive ---------------------------------- #
-    st.subheader("🔬 Site Engineering Inspector & Transfer Scaling")
     logistics = compute_field_logistics(row)
 
-    sc = st.columns(5)
-    sc[0].metric("Composite Similarity", f"{row['similarity_score']:.1f}%")
-    for col, g in zip(sc[1:], FEATURE_GROUPS):
-        col.metric(GROUP_LABELS[g].split(" &")[0], f"{row[f'subscore_{g}']:.1f}%")
+    with st.expander("🔬 Site Engineering Inspector & Transfer Scaling", expanded=True):
+        sc = st.columns(5)
+        sc[0].metric("Composite Similarity", f"{row['similarity_score']:.1f}%")
+        for col, g in zip(sc[1:], FEATURE_GROUPS):
+            col.metric(GROUP_LABELS[g].split(" &")[0], f"{row[f'subscore_{g}']:.1f}%")
 
     left, right = st.columns([1.08, 1])
     with left:
-        st.markdown("**(a) Multi-Sensor Physical Fingerprint (Earth vs. Orbital Target)**")
-        st.plotly_chart(build_radar(row, target_data["parameters"], scored_valid, target_name), **_stretch())
-        st.caption(
-            "Axes normalized across candidate pool (1st–99th percentile) and target bounds. Hover over vertices for raw physical values."
-        )
-
-    with right:
-        st.markdown("**(b) Engineering Transfer Functions & Field Logistics**")
-        tf = calculate_transfer_functions(row, target_data)
-        g_label = "1/6g" if body == "Moon" else "0.38g"
-
-        m1, m2 = st.columns(2)
-        m1.metric(
-            f"Bearing Capacity Ratio ({g_label})",
-            f"{tf['gravity_load']['bearing_capacity_ratio']:.3f}×",
-            help="Ratio of ultimate foundation bearing capacity q_target / q_Earth (Terzaghi/Vesic strip footing).",
-        )
-        m2.metric(
-            "Vacuum Convective Loss Removed",
-            f"{tf['vacuum_thermal']['cold_phase']['convective_loss_removed_w_m2']:.1f} W/m²",
-            help="Atmospheric convective heat loss present on Earth that vanishes in lunar vacuum.",
-        )
-
-        m3, m4 = st.columns(2)
-        m3.metric(
-            "SPE Regolith Shield Thickness",
-            f"{tf['spe_shielding']['required_thickness_cm']:.1f} cm",
-            help="Local basaltic regolith overburden needed to attenuate Solar Particle Events below 50 mSv/yr.",
-        )
-        m4.metric(
-            "Site Elevation & Air Density",
-            f"{logistics['elevation_m']:.0f} m ({logistics['air_density_pct_sl']:.0f}% SL)",
-            help="High-altitude sites naturally reduce ambient atmospheric density and convective noise.",
-        )
-
-        st.info(
-            f"**ISRU & Mobility Profile:** {logistics['trafficability_class']} · "
-            f"Est. Basalt Sintering Temp: **{logistics['sinter_temp_c']:.0f} °C** · "
-            f"Excavation Specific Energy: **{logistics['excavation_kwh_t']:.1f} kWh/t**"
-        )
-
-        if tf["spe_shielding"]["gcr_exceeds_limit"]:
-            st.warning(
-                f"Unshielded GCR dose (~{tf['spe_shielding']['gcr_dose_msv_yr_unshielded']:.0f} mSv/yr) exceeds the "
-                f"{tf['spe_shielding']['dose_limit_msv_yr']:.0f} mSv/yr limit; requires subsurface/lava-tube siting or crew rotation."
+        with st.expander("(a) Multi-Sensor Physical Fingerprint (Earth vs. Orbital Target)", expanded=True):
+            st.plotly_chart(build_radar(row, target_data["parameters"], scored_valid, target_name), **_stretch())
+            st.caption(
+                "Axes normalized across candidate pool (1st–99th percentile) and target bounds. Hover over vertices for raw physical values."
             )
 
-        with st.expander("Inspect Raw Transfer Function JSON"):
-            st.json(tf)
+    with right:
+        with st.expander("(b) Engineering Transfer Functions & Field Logistics", expanded=True):
+            tf = calculate_transfer_functions(row, target_data)
+            g_label = "1/6g" if body == "Moon" else "0.38g"
 
-    # ---- Fidelity vs. Breakdown Matrix ------------------------------------ #
-    st.markdown("**(c) Scientific Fidelity Matrix: Where the Analogy Works vs. Where It Breaks Down**")
+            m1, m2 = st.columns(2)
+            m1.metric(
+                f"Bearing Capacity Ratio ({g_label})",
+                f"{tf['gravity_load']['bearing_capacity_ratio']:.3f}×",
+                help="Ratio of ultimate foundation bearing capacity q_target / q_Earth (Terzaghi/Vesic strip footing).",
+            )
+            m2.metric(
+                "Vacuum Convective Loss Removed",
+                f"{tf['vacuum_thermal']['cold_phase']['convective_loss_removed_w_m2']:.1f} W/m²",
+                help="Atmospheric convective heat loss present on Earth that vanishes in lunar vacuum.",
+            )
+
+            m3, m4 = st.columns(2)
+            m3.metric(
+                "SPE Regolith Shield Thickness",
+                f"{tf['spe_shielding']['required_thickness_cm']:.1f} cm",
+                help="Local basaltic regolith overburden needed to attenuate Solar Particle Events below 50 mSv/yr.",
+            )
+            m4.metric(
+                "Site Elevation & Air Density",
+                f"{logistics['elevation_m']:.0f} m ({logistics['air_density_pct_sl']:.0f}% SL)",
+                help="High-altitude sites naturally reduce ambient atmospheric density and convective noise.",
+            )
+
+            st.info(
+                f"**ISRU & Mobility Profile:** {logistics['trafficability_class']} · "
+                f"Est. Basalt Sintering Temp: **{logistics['sinter_temp_c']:.0f} °C** · "
+                f"Excavation Specific Energy: **{logistics['excavation_kwh_t']:.1f} kWh/t**"
+            )
+
+            if tf["spe_shielding"]["gcr_exceeds_limit"]:
+                st.warning(
+                    f"Unshielded GCR dose (~{tf['spe_shielding']['gcr_dose_msv_yr_unshielded']:.0f} mSv/yr) exceeds the "
+                    f"{tf['spe_shielding']['dose_limit_msv_yr']:.0f} mSv/yr limit; requires subsurface/lava-tube siting or crew rotation."
+                )
+
+            with st.popover("Inspect Raw Transfer Function JSON"):
+                st.json(tf)
+
+    # ---- Works vs. Breakdown Matrix --------------------------------------- #
     matrix = generate_breakdown_matrix(row, target_data)
     works = matrix["where_analogy_works"]
     breaks = matrix["where_analogy_breaks_down"]
 
-    t1, t2, t3 = st.tabs(
-        [
-            "✅ Where the Analogy Works (Valid Fidelity)",
-            "⚠️ Where the Analogy Breaks Down (Engineering Compensation)",
-            "📊 Macro-Region Trade-Off Study",
-        ]
-    )
-
-    with t1:
-        gcols = st.columns(len(works))
-        for col, (g, v) in zip(gcols, works.items()):
-            fid = v["group_fidelity_pct"]
-            col.metric(
-                GROUP_LABELS.get(g, g).split(" &")[0],
-                "—" if fid is None else f"{fid:.0f}%",
-                VERDICT_ICON.get(v["verdict"], v["verdict"]),
-                delta_color="off",
-                help=v["rationale"],
-            )
-        rows = []
-        for g, v in works.items():
-            for feat, d in v["features"].items():
-                rows.append(
-                    {
-                        "Domain": GROUP_LABELS.get(g, g),
-                        "Parameter": FEATURE_LABELS.get(feat, feat),
-                        "Earth Candidate": d["candidate_value"],
-                        "Target Range": f"{fmt(d['target_range'][0])} – {fmt(d['target_range'][1])}",
-                        "Target Ideal": d["target_ideal"],
-                        "Fidelity (%)": d["fidelity_pct"],
-                        "Status": VERDICT_ICON.get(d["verdict"], d["verdict"]),
-                    }
-                )
-        st.dataframe(
-            pd.DataFrame(rows),
-            hide_index=True,
-            **_stretch(),
-            column_config={
-                "Earth Candidate": st.column_config.NumberColumn(format="%.3g"),
-                "Target Ideal": st.column_config.NumberColumn(format="%.3g"),
-                "Fidelity (%)": st.column_config.ProgressColumn(min_value=0, max_value=100, format="%.0f"),
-            },
-        )
-
-    with t2:
-        brows = [
-            {
-                "Physical Domain": BREAK_LABELS.get(k, k),
-                "Why Earth Analogy Breaks Down": v["limitation"],
-                "Quantified Delta": ", ".join(f"{qk}: {fmt(qv)}" for qk, qv in v["quantified"].items()) or "—",
-                "Required Engineering Compensation": v["engineering_compensation"],
-            }
-            for k, v in breaks.items()
-        ]
-        st.table(pd.DataFrame(brows).set_index("Physical Domain"))
-
-    with t3:
-        st.markdown("Comparison of the highest-ranking 5×5 km analog site within each geological macro-region:")
-        st.plotly_chart(build_regional_comparison_chart(scored_valid), **_stretch())
-        named = scored_valid[scored_valid["macro_region"].isin(NAMED_REGIONS)]
-        champs_table = (
-            named.groupby("macro_region", as_index=False)
-            .first()
-            .sort_values("similarity_score", ascending=False)[
-                [
-                    "macro_region",
-                    "lat",
-                    "lon",
-                    "elevation_m",
-                    "similarity_score",
-                    "subscore_topography",
-                    "subscore_thermal",
-                    "subscore_mineralogy_isru",
-                    "subscore_volatiles",
-                ]
+    with st.expander("(c) Analogy Matrix: Where the Analogy Works vs. Where It Breaks Down", expanded=True):
+        t1, t2, t3 = st.tabs(
+            [
+                "✅ Where the Analogy Works (Target Range Check)",
+                "⚠️ Where the Analogy Breaks Down (Engineering Compensation)",
+                "📊 Macro-Region Trade-Off Study",
             ]
         )
-        st.dataframe(champs_table, hide_index=True, **_stretch())
 
-        export_cols = [
-            "macro_region",
-            "lat",
-            "lon",
-            "elevation_m",
-            "slope_deg",
-            "tri_m",
-            "delta_t_k",
-            "mafic_index",
-            "clay_hydrated_index",
-            "subsurface_ice_moisture",
-            "albedo",
-            "similarity_score",
-        ]
-        avail_cols = [c for c in export_cols if c in shown.columns]
-        csv_bytes = shown[avail_cols].to_csv(index=False).encode("utf-8")
-        st.download_button(
-            label="📥 Export Ranked Analog Candidates (CSV)",
-            data=csv_bytes,
-            file_name=f"nesy_{target_name.lower().replace(' ', '_')}_analogs.csv",
-            mime="text/csv",
-        )
+        with t1:
+            rows = []
+            for g, v in works.items():
+                for feat, d in v["features"].items():
+                    rows.append(
+                        {
+                            "Domain": GROUP_LABELS.get(g, g),
+                            "Parameter": FEATURE_LABELS.get(feat, feat),
+                            "Earth Candidate": d["candidate_value"],
+                            "Target Range": f"{fmt(d['target_range'][0])} – {fmt(d['target_range'][1])}",
+                            "Target Ideal": d["target_ideal"],
+                            "Status": VERDICT_ICON.get(d["verdict"], d["verdict"]),
+                        }
+                    )
+            st.dataframe(
+                pd.DataFrame(rows),
+                hide_index=True,
+                **_stretch(),
+                column_config={
+                    "Earth Candidate": st.column_config.NumberColumn(format="%.3g"),
+                    "Target Ideal": st.column_config.NumberColumn(format="%.3g"),
+                },
+            )
+            st.caption("Valid: the Earth value lies inside the target range (min – max). Not valid: it lies outside.")
+
+        with t2:
+            brows = [
+                {
+                    "Physical Domain": BREAK_LABELS.get(k, k),
+                    "Why Earth Analogy Breaks Down": v["limitation"],
+                    "Quantified Delta": ", ".join(f"{qk}: {fmt(qv)}" for qk, qv in v["quantified"].items()) or "—",
+                    "Required Engineering Compensation": v["engineering_compensation"],
+                }
+                for k, v in breaks.items()
+            ]
+            st.table(pd.DataFrame(brows).set_index("Physical Domain"))
+
+        with t3:
+            st.markdown("Comparison of the highest-ranking 5×5 km analog site within each geological macro-region:")
+            st.plotly_chart(build_regional_comparison_chart(scored_valid), **_stretch())
+            named = scored_valid[scored_valid["macro_region"].isin(NAMED_REGIONS)]
+            champs_table = (
+                named.groupby("macro_region", as_index=False)
+                .first()
+                .sort_values("similarity_score", ascending=False)[
+                    [
+                        "macro_region",
+                        "lat",
+                        "lon",
+                        "elevation_m",
+                        "similarity_score",
+                        "subscore_topography",
+                        "subscore_thermal",
+                        "subscore_mineralogy_isru",
+                        "subscore_volatiles",
+                    ]
+                ]
+            )
+            st.dataframe(champs_table, hide_index=True, **_stretch())
+
+            export_cols = [
+                "macro_region",
+                "lat",
+                "lon",
+                "elevation_m",
+                "slope_deg",
+                "tri_m",
+                "delta_t_k",
+                "mafic_index",
+                "clay_hydrated_index",
+                "subsurface_ice_moisture",
+                "albedo",
+                "similarity_score",
+            ]
+            avail_cols = [c for c in export_cols if c in shown.columns]
+            csv_bytes = shown[avail_cols].to_csv(index=False).encode("utf-8")
+            st.download_button(
+                label="📥 Export Ranked Analog Candidates (CSV)",
+                data=csv_bytes,
+                file_name=f"nesy_{target_name.lower().replace(' ', '_')}_analogs.csv",
+                mime="text/csv",
+            )
 
     # ---- Cross-Agency Orbital Verification Links -------------------------- #
-    st.markdown("**(d) Cross-Agency Orbital Verification & Data Provenance**")
-    lat, lon = float(row["lat"]), float(row["lon"])
-    l1, l2 = st.columns(2)
-    with l1:
-        st.link_button(
-            f"🌍 Verify Earth Site in NASA Worldview ({lat:.3f}°, {lon:.3f}°)",
-            worldview_url(lat, lon),
-            **_stretch(),
-        )
-    with l2:
-        if body == "Moon":
+    with st.expander("(d) Cross-Agency Orbital Verification & Data Provenance", expanded=True):
+        lat, lon = float(row["lat"]), float(row["lon"])
+        l1, l2 = st.columns(2)
+        with l1:
             st.link_button(
-                f"🌙 Inspect Lunar Twin in LRO QuickMap ({target_name})",
-                quickmap_url(float(target_data["center_lat"]), float(target_data["center_lon"])),
+                f"🌍 Verify Earth Site in NASA Worldview ({lat:.3f}°, {lon:.3f}°)",
+                worldview_url(lat, lon),
                 **_stretch(),
             )
-        else:
-            st.link_button("🔴 Inspect Martian Twin in NASA Mars Trek", "https://trek.nasa.gov/mars/", **_stretch())
+        with l2:
+            if body == "Moon":
+                st.link_button(
+                    f"🌙 Inspect Lunar Twin in LRO QuickMap ({target_name})",
+                    quickmap_url(float(target_data["center_lat"]), float(target_data["center_lon"])),
+                    **_stretch(),
+                )
+            else:
+                st.link_button("🔴 Inspect Martian Twin in NASA Mars Trek", "https://trek.nasa.gov/mars/", **_stretch())
 
     st.divider()
     st.caption(
         "Data Provenance: NASA PDS / LRO (LOLA, Diviner, M³, Lunar Prospector) · NASA Earthdata (NASADEM, MODIS MOD11A1, SMAP SPL4SMGP, Landsat 9) · "
-        "ESA Copernicus (WorldCover v200 / Sentinel) · CSA RADARSAT SAR Roughness Methodology · JAXA G-Portal."
+        "ESA Copernicus (WorldCover v200 / Sentinel)."
     )
 
 
@@ -844,4 +833,5 @@ def main() -> None:
 st.navigation([
     st.Page(main, title="Analog Suite", icon="🛰️", default=True),
     st.Page(str(BASE_DIR / "views" / "discovery.py"), title="Discovery", icon="🧭", url_path="discovery"),
+    st.Page(str(BASE_DIR / "views" / "top.py"), title="Top", icon="🏆", url_path="top"),
 ]).run()

@@ -16,6 +16,7 @@ import base64
 import io
 import json
 import math
+import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -72,8 +73,15 @@ def _fetch_tile(z: int, x: int, y: int, timeout: float) -> np.ndarray:
 
     url = ELEVATION_TILES.format(z=z, x=x, y=y)
     req = urllib.request.Request(url, headers={"User-Agent": "nesy-terrain-twin"})
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        img = Image.open(io.BytesIO(resp.read())).convert("RGB")
+    for attempt in range(3):          # a single slow / dropped tile used to leave the 3D view empty
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                img = Image.open(io.BytesIO(resp.read())).convert("RGB")
+            break
+        except Exception:
+            if attempt == 2:
+                raise
+            time.sleep(1 + attempt)
     rgb = np.asarray(img, dtype=float)
     return rgb[..., 0] * 256 + rgb[..., 1] + rgb[..., 2] / 256 - 32768
 
@@ -110,7 +118,7 @@ def fetch_earth_dem(lat: float, lon: float, timeout: float = 12.0) -> Dict[str, 
 
 
 # --------------------------------------------------------------------------- #
-# Measures (same definitions as Nesy's terrain.js)
+# Measures (same definitions as NESY's terrain.js)
 # --------------------------------------------------------------------------- #
 def slope_deg(z: np.ndarray, cell: float = CELL_M) -> np.ndarray:
     """Horn 3x3 slope [deg] for interior cells."""
@@ -148,8 +156,10 @@ def summarize(z: np.ndarray, cell: float = CELL_M) -> Dict[str, Any]:
     }
 
 
-def hillshade(z: np.ndarray, az_deg: float, el_deg: float, cell: float = CELL_M) -> np.ndarray:
-    """Lambert shading with cast shadows, uint8 (n, n). Azimuth clockwise from grid-up."""
+def hillshade(z: np.ndarray, az_deg: float, el_deg: float, cell: float = CELL_M,
+              cast_shadows: bool = True) -> np.ndarray:
+    """Lambert shading, uint8 (n, n). Azimuth clockwise from grid-up. cast_shadows=False skips the
+    shadow ray-march, so slopes are shaded but nothing is blacked out."""
     n = z.shape[0]
     az, el = math.radians(az_deg), math.radians(el_deg)
     lx, ly, lz = math.sin(az) * math.cos(el), math.cos(az) * math.cos(el), math.sin(el)
@@ -159,7 +169,7 @@ def hillshade(z: np.ndarray, az_deg: float, el_deg: float, cell: float = CELL_M)
     lum = (-dzdx * lx - dzdn * ly + lz) / np.sqrt(dzdx ** 2 + dzdn ** 2 + 1)
     lum = np.where(np.isfinite(lum) & (lum > 0), lum, 0.0)
 
-    if el_deg < 89.9:
+    if cast_shadows and el_deg < 89.9:
         dc_raw, dr_raw = math.sin(az), -math.cos(az)
         longest = max(abs(dc_raw), abs(dr_raw)) or 1.0
         dc, dr = dc_raw / longest, dr_raw / longest

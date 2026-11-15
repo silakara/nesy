@@ -1,161 +1,161 @@
-target,lat,lon,elevation_m,slope_median,slope_p90,roughness_median,relief_m,target_slope_median,target_slope_p90,target_roughness_median,match_distance,slope_match,rank
-Jezero Crater Rim,44.29732,95.45883,1305,2.27,5.31,0.99,217.8,2.22,5.19,0.94,0.24,True,1
-Jezero Crater Rim,40.11694,76.13937,2042,2.23,4.46,0.96,273.6,2.22,5.19,0.94,0.256,True,2
-Jezero Crater Rim,41.48595,80.54901,1445,1.98,4.43,0.87,217.1,2.22,5.19,0.94,0.393,True,3
-Jezero Crater Rim,42.01053,84.30634,1154,2.0,3.8,0.86,215.6,2.22,5.19,0.94,0.574,True,4
-Jezero Crater Rim,43.2512,98.52814,1317,1.79,4.36,0.8,212.8,2.22,5.19,0.94,0.704,True,5
-Jezero Crater Rim,28.85309,55.88608,1831,2.36,6.04,1.1,216.7,2.22,5.19,0.94,0.715,True,6
-Jezero Crater Rim,29.57943,34.58359,824,2.39,6.28,1.12,217.9,2.22,5.19,0.94,0.827,True,7
-Jezero Crater Rim,26.5959,40.10284,1224,2.46,6.38,1.15,219.4,2.22,5.19,0.94,0.912,True,8
-Jezero Crater Rim,28.23544,62.2142,804,2.33,6.8,1.13,221.8,2.22,5.19,0.94,0.943,True,9
-Jezero Crater Rim,15.53441,25.84946,956,2.49,5.29,1.19,238.6,2.22,5.19,0.94,0.971,True,10
-Jezero Crater Rim,21.92012,-12.08771,436,2.53,5.81,1.25,202.6,2.22,5.19,0.94,1.194,True,11
-Jezero Crater Rim,25.24221,8.00629,1519,2.62,6.94,1.25,234.1,2.22,5.19,0.94,1.313,True,12
-Jezero Crater Rim,29.42166,54.92203,2016,2.69,7.07,1.26,249.6,2.22,5.19,0.94,1.362,True,13
-Jezero Crater Rim,29.37619,-2.4733,579,2.88,6.7,1.3,211.6,2.22,5.19,0.94,1.453,True,14
-Jezero Crater Rim,39.07784,-118.62625,1298,1.57,5.87,0.65,235.8,2.22,5.19,0.94,1.501,True,15
-Jezero Crater Rim,40.59101,105.86151,1494,2.94,6.62,1.35,232.1,2.22,5.19,0.94,1.589,True,16
-Jezero Crater Rim,41.25923,103.75214,1024,2.99,6.86,1.35,210.4,2.22,5.19,0.94,1.628,True,17
-Jezero Crater Rim,43.88305,92.20413,1994,3.05,7.71,1.35,231.7,2.22,5.19,0.94,1.746,True,18
-Jezero Crater Rim,26.00989,39.28986,855,2.22,10.94,1.05,257.3,2.22,5.19,0.94,1.972,False,19
-Jezero Crater Rim,13.71937,41.83456,232,2.96,7.0,1.47,241.2,2.22,5.19,0.94,1.975,True,20
-Jezero Crater Rim,27.44248,60.83954,807,3.15,8.85,1.47,282.4,2.22,5.19,0.94,2.235,False,21
-Jezero Crater Rim,22.20521,45.9256,827,2.98,9.52,1.41,207.7,2.22,5.19,0.94,2.236,False,22
-Jezero Crater Rim,24.69444,42.55829,934,3.1,8.26,1.54,234.0,2.22,5.19,0.94,2.309,False,23
-Jezero Crater Rim,-19.50931,13.2399,626,2.97,10.23,1.39,226.8,2.22,5.19,0.94,2.357,False,24
-Jezero Crater Rim,41.83069,88.98651,803,3.6,7.5,1.68,219.9,2.22,5.19,0.94,2.576,True,25
-Jezero Crater Rim,17.46726,21.9136,975,3.56,8.66,1.63,229.2,2.22,5.19,0.94,2.613,False,26
-Jezero Crater Rim,23.59168,7.3526,1101,3.34,9.54,1.59,244.4,2.22,5.19,0.94,2.657,False,27
-Jezero Crater Rim,27.44248,62.54242,1356,3.26,10.54,1.52,289.1,2.22,5.19,0.94,2.696,False,28
-Jezero Crater Rim,23.91848,10.06622,1023,3.4,8.62,1.68,257.3,2.22,5.19,0.94,2.697,False,29
-Jezero Crater Rim,19.15684,32.97409,395,2.85,12.22,1.36,224.2,2.22,5.19,0.94,2.8,False,30
-Jezero Crater Rim,26.99307,64.60236,1305,3.7,9.49,1.71,239.8,2.22,5.19,0.94,2.918,False,31
-Jezero Crater Rim,14.03934,40.85129,162,3.31,11.57,1.57,259.3,2.22,5.19,0.94,3.034,False,32
-Jezero Crater Rim,22.43388,15.18585,768,3.89,9.45,1.91,253.6,2.22,5.19,0.94,3.332,False,33
-Jezero Crater Rim,19.95141,18.11508,866,4.24,9.81,2.0,241.9,2.22,5.19,0.94,3.586,False,34
-Jezero Crater Rim,26.14311,65.71198,259,3.94,12.49,1.87,344.8,2.22,5.19,0.94,3.817,False,35
-Jezero Crater Rim,21.73654,13.12592,682,4.23,9.73,2.19,254.6,2.22,5.19,0.94,3.912,False,36
-Jezero Crater Rim,24.00884,4.24347,723,5.05,12.54,2.34,260.4,2.22,5.19,0.94,4.644,False,37
-Jezero Crater Rim,25.19749,4.49066,924,5.03,12.06,2.42,272.4,2.22,5.19,0.94,4.684,False,38
-Jezero Crater Rim,24.82912,8.85773,1126,6.08,14.31,3.19,247.2,2.22,5.19,0.94,6.131,False,39
-Jezero Crater Rim,26.81672,28.49579,168,8.16,19.96,4.29,302.0,2.22,5.19,0.94,8.365,False,40
-Malapert Mountain,-28.02956,-68.7236,5632,16.68,26.88,6.98,1413.9,16.22,21.01,6.81,1.966,False,1
-Malapert Mountain,-25.67866,-67.88177,5149,17.68,27.26,7.44,1450.7,16.22,21.01,6.81,2.173,False,2
-Malapert Mountain,-26.76278,-67.93121,4489,17.11,27.88,7.26,1209.7,16.22,21.01,6.81,2.327,False,3
-Malapert Mountain,-22.75339,-67.88177,5193,17.06,28.07,7.18,1222.6,16.22,21.01,6.81,2.381,False,4
-Malapert Mountain,-28.21366,-69.37454,4658,19.23,27.72,8.11,1090.8,16.22,21.01,6.81,2.568,False,5
-Malapert Mountain,-26.71863,-66.67328,4545,19.24,27.96,8.15,1302.6,16.22,21.01,6.81,2.647,False,6
-Malapert Mountain,-24.31456,-66.72272,5507,18.13,28.72,7.66,1136.5,16.22,21.01,6.81,2.698,False,7
-Malapert Mountain,-25.23227,-66.88202,4505,16.94,29.33,7.23,1065.0,16.22,21.01,6.81,2.797,False,8
-Malapert Mountain,-28.78571,-69.86893,3832,20.18,28.32,8.58,1285.3,16.22,21.01,6.81,2.954,False,9
-Malapert Mountain,-21.6804,-67.88177,5016,19.28,29.55,8.21,1079.7,16.22,21.01,6.81,3.133,False,10
-Malapert Mountain,-29.96564,-70.02548,3356,19.96,29.53,8.52,1285.5,16.22,21.01,6.81,3.256,False,11
-Malapert Mountain,-24.40464,-67.98065,5104,20.49,30.02,8.76,1279.1,16.22,21.01,6.81,3.504,False,12
-Malapert Mountain,22.43388,59.1861,770,18.25,31.3,7.92,1262.7,16.22,21.01,6.81,3.56,False,13
-Malapert Mountain,-23.9988,-67.27753,4817,21.76,29.63,9.28,1300.4,16.22,21.01,6.81,3.678,False,14
-Malapert Mountain,-28.02956,-70.12985,2341,21.17,30.36,9.11,1134.1,16.22,21.01,6.81,3.755,False,15
-Malapert Mountain,22.99127,57.62054,1233,19.49,32.17,8.3,1160.9,16.22,21.01,6.81,3.974,False,16
-Malapert Mountain,28.28141,35.28671,1167,20.28,31.78,8.69,1175.3,16.22,21.01,6.81,3.987,False,17
-Malapert Mountain,26.99307,53.51166,497,18.95,32.38,8.28,1085.6,16.22,21.01,6.81,3.992,False,18
-Malapert Mountain,27.39859,55.06622,725,20.29,32.62,8.97,1312.5,16.22,21.01,6.81,4.279,False,19
-Malapert Mountain,44.97743,93.0336,1785,21.01,32.43,9.05,1376.0,16.22,21.01,6.81,4.316,False,20
-Malapert Mountain,38.30395,89.61411,4714,21.21,32.36,9.08,1129.5,16.22,21.01,6.81,4.322,False,21
-Malapert Mountain,-16.748,-71.1351,2469,21.35,32.39,9.29,1173.2,16.22,21.01,6.81,4.381,False,22
-Malapert Mountain,36.74329,84.89685,5010,20.8,33.74,9.06,1419.8,16.22,21.01,6.81,4.682,False,23
-Malapert Mountain,-29.55793,-69.5311,4240,20.04,34.34,8.68,1465.5,16.22,21.01,6.81,4.746,False,24
-Malapert Mountain,27.03711,65.76141,1489,21.65,33.67,9.39,1199.2,16.22,21.01,6.81,4.807,False,25
-Malapert Mountain,38.57501,72.91214,4389,23.48,32.73,10.1,1081.1,16.22,21.01,6.81,4.916,False,26
-Malapert Mountain,26.90493,54.41254,567,20.14,35.15,8.82,1224.0,16.22,21.01,6.81,5.024,False,27
-Malapert Mountain,17.10798,38.27225,1349,23.39,33.14,10.22,1034.3,16.22,21.01,6.81,5.029,False,28
-Malapert Mountain,14.40143,40.10147,565,22.77,33.63,10.01,1256.5,16.22,21.01,6.81,5.038,False,29
-Malapert Mountain,-16.07353,-72.54135,1561,21.11,34.76,9.2,1199.4,16.22,21.01,6.81,5.044,False,30
-Malapert Mountain,37.79568,86.97464,4560,23.59,33.11,10.3,1161.3,16.22,21.01,6.81,5.067,False,31
-Malapert Mountain,19.8636,36.77261,1156,23.1,33.55,10.07,1094.4,16.22,21.01,6.81,5.071,False,32
-Malapert Mountain,20.34849,18.25516,1875,21.03,35.21,9.11,1237.7,16.22,21.01,6.81,5.16,False,33
-Malapert Mountain,-15.62171,-74.18106,1826,23.14,33.96,10.15,1270.2,16.22,21.01,6.81,5.202,False,34
-Malapert Mountain,-11.7504,-76.90018,1320,21.42,35.23,9.44,1227.5,16.22,21.01,6.81,5.249,False,35
-Malapert Mountain,27.31077,55.71991,1030,21.7,35.9,9.51,1240.0,16.22,21.01,6.81,5.492,False,36
-Malapert Mountain,29.33071,60.00046,1411,22.47,35.87,9.93,1139.9,16.22,21.01,6.81,5.628,False,37
-Malapert Mountain,17.7343,37.84927,872,25.04,35.58,11.03,1203.4,16.22,21.01,6.81,6.067,False,38
-Malapert Mountain,28.28141,58.64639,1658,25.86,37.93,11.52,1237.3,16.22,21.01,6.81,6.897,False,39
-Malapert Mountain,22.20521,36.32904,626,24.2,39.75,10.84,1137.2,16.22,21.01,6.81,7.093,False,40
-Marius Hills,-16.38734,-72.44797,1083,2.54,6.23,1.2,333.5,2.62,5.24,1.19,0.332,True,1
-Marius Hills,15.80415,30.49118,590,2.6,6.05,1.29,283.1,2.62,5.24,1.19,0.431,True,2
-Marius Hills,40.7743,61.74591,145,2.37,5.08,1.07,263.0,2.62,5.24,1.19,0.447,True,3
-Marius Hills,16.56907,22.24045,663,2.16,5.91,1.08,247.1,2.62,5.24,1.19,0.461,True,4
-Marius Hills,23.68226,44.01398,932,2.45,6.84,1.23,360.0,2.62,5.24,1.19,0.554,True,5
-Marius Hills,36.87523,55.79407,1289,2.23,4.68,1.04,354.8,2.62,5.24,1.19,0.577,True,6
-Marius Hills,27.53019,64.55292,938,2.58,6.76,1.28,384.5,2.62,5.24,1.19,0.595,True,7
-Marius Hills,16.61382,44.1774,1504,2.19,6.39,1.07,297.8,2.62,5.24,1.19,0.598,True,8
-Marius Hills,24.82912,46.07391,786,2.1,5.17,1.03,260.1,2.62,5.24,1.19,0.626,True,9
-Marius Hills,25.42095,32.30804,234,2.02,5.09,1.02,267.1,2.62,5.24,1.19,0.642,True,10
-Marius Hills,24.18935,8.1546,1063,2.69,6.64,1.37,262.7,2.62,5.24,1.19,0.751,True,11
-Marius Hills,16.16588,37.00607,504,1.9,4.47,0.99,280.7,2.62,5.24,1.19,0.83,True,12
-Marius Hills,17.60083,-11.50955,463,2.01,4.24,0.99,255.3,2.62,5.24,1.19,0.857,True,13
-Marius Hills,41.30463,54.93439,137,2.08,4.04,0.93,271.2,2.62,5.24,1.19,1.095,True,14
-Marius Hills,-15.1689,-74.97757,617,3.04,6.36,1.52,317.2,2.62,5.24,1.19,1.098,True,15
-Marius Hills,23.31956,41.30035,1138,1.93,3.8,0.91,263.7,2.62,5.24,1.19,1.212,True,16
-Marius Hills,25.73311,58.82904,53,2.99,7.97,1.51,319.7,2.62,5.24,1.19,1.348,True,17
-Marius Hills,38.1594,86.51321,1458,1.85,3.66,0.88,267.3,2.62,5.24,1.19,1.367,True,18
-Marius Hills,25.09804,3.3316,479,3.15,7.85,1.53,272.5,2.62,5.24,1.19,1.387,True,19
-Marius Hills,13.21722,40.33493,187,2.63,9.34,1.26,262.5,2.62,5.24,1.19,1.388,False,20
-Marius Hills,19.77575,34.52316,438,2.96,8.72,1.45,349.9,2.62,5.24,1.19,1.423,False,21
-Marius Hills,20.8049,30.6546,274,3.03,8.18,1.54,273.7,2.62,5.24,1.19,1.475,True,22
-Marius Hills,19.33577,17.92831,609,3.14,8.36,1.6,262.3,2.62,5.24,1.19,1.635,False,23
-Marius Hills,29.71549,64.5845,1121,3.24,8.52,1.62,296.3,2.62,5.24,1.19,1.701,False,24
-Marius Hills,44.25209,102.17422,1306,1.71,3.84,0.79,319.6,2.62,5.24,1.19,1.756,True,25
-Marius Hills,24.09913,25.58441,663,3.39,7.43,1.74,260.8,2.62,5.24,1.19,1.781,True,26
-Marius Hills,45.74357,91.94321,1195,1.73,3.87,0.78,268.1,2.62,5.24,1.19,1.783,True,27
-Marius Hills,21.36869,30.90179,213,3.76,7.54,1.81,104.4,2.62,5.24,1.19,1.967,True,28
-Marius Hills,26.55168,32.81342,225,3.33,9.6,1.67,317.1,2.62,5.24,1.19,2.051,False,29
-Marius Hills,40.16103,95.06607,1179,1.67,3.38,0.73,268.5,2.62,5.24,1.19,2.086,True,30
-Marius Hills,26.72844,57.37335,203,3.76,10.41,1.79,288.1,2.62,5.24,1.19,2.455,False,31
-Marius Hills,22.43388,44.26117,985,3.55,10.5,1.83,336.2,2.62,5.24,1.19,2.54,False,32
-Marius Hills,26.14311,65.6131,337,4.02,10.05,1.9,253.9,2.62,5.24,1.19,2.588,False,33
-Marius Hills,20.89731,34.21967,491,3.7,11.63,1.84,281.5,2.62,5.24,1.19,2.843,False,34
-Marius Hills,24.32457,55.9671,493,3.7,11.78,1.86,356.1,2.62,5.24,1.19,2.901,False,35
-Marius Hills,23.41033,33.8736,451,3.88,11.18,2.03,304.3,2.62,5.24,1.19,3.024,False,36
-Marius Hills,21.87424,17.09747,1072,4.27,10.57,2.13,256.8,2.62,5.24,1.19,3.08,False,37
-Marius Hills,23.96367,34.87335,495,4.97,11.24,2.58,336.3,2.62,5.24,1.19,3.925,False,38
-Marius Hills,26.50745,-0.43121,233,5.85,18.42,3.11,317.2,2.62,5.24,1.19,6.103,False,39
-Marius Hills,19.24503,14.22592,439,7.19,18.49,3.83,321.4,2.62,5.24,1.19,6.841,False,40
-Shackleton Ridge,-24.40464,-67.93121,4508,11.96,21.62,5.0,891.5,11.87,19.47,4.88,0.724,True,1
-Shackleton Ridge,-25.50031,-66.77216,4468,14.23,24.92,6.03,883.4,11.87,19.47,4.88,2.191,False,2
-Shackleton Ridge,-29.69402,-69.71237,4151,11.52,26.09,4.93,866.0,11.87,19.47,4.88,2.21,False,3
-Shackleton Ridge,-26.58607,-67.93121,4934,13.43,26.55,5.65,903.9,11.87,19.47,4.88,2.5,False,4
-Shackleton Ridge,-28.21366,-69.42673,4407,15.8,25.55,6.67,858.5,11.87,19.47,4.88,2.781,False,5
-Shackleton Ridge,37.79568,73.15384,4100,13.69,27.92,5.78,901.2,11.87,19.47,4.88,2.976,False,6
-Shackleton Ridge,-17.37554,-71.08841,1079,15.08,27.59,6.52,924.0,11.87,19.47,4.88,3.178,False,7
-Shackleton Ridge,37.32976,87.67776,5108,15.62,28.07,6.67,913.1,11.87,19.47,4.88,3.42,False,8
-Shackleton Ridge,26.5959,58.97736,1078,16.58,28.18,7.11,862.0,11.87,19.47,4.88,3.696,False,9
-Shackleton Ridge,37.51299,89.96017,4211,12.65,30.91,5.68,848.6,11.87,19.47,4.88,3.88,False,10
-Shackleton Ridge,28.57849,60.2092,1702,15.68,30.02,6.78,828.5,11.87,19.47,4.88,4.009,False,11
-Shackleton Ridge,27.72851,61.25015,1832,14.58,30.93,6.42,868.1,11.87,19.47,4.88,4.105,False,12
-Shackleton Ridge,-9.3095,-78.25974,439,15.49,30.76,6.85,945.9,11.87,19.47,4.88,4.224,False,13
-Shackleton Ridge,38.89851,89.14169,2446,13.24,31.96,5.65,899.0,11.87,19.47,4.88,4.239,False,14
-Shackleton Ridge,21.36869,18.80035,1410,15.43,31.05,6.72,889.6,11.87,19.47,4.88,4.279,False,15
-Shackleton Ridge,-8.79958,-78.4465,634,17.42,29.64,7.46,950.6,11.87,19.47,4.88,4.294,False,16
-Shackleton Ridge,43.70064,100.83115,2182,17.8,29.49,7.59,855.1,11.87,19.47,4.88,4.345,False,17
-Shackleton Ridge,22.94575,58.97736,1221,16.14,31.05,7.03,954.8,11.87,19.47,4.88,4.42,False,18
-Shackleton Ridge,43.47086,91.33759,1255,16.83,30.72,7.28,870.1,11.87,19.47,4.88,4.462,False,19
-Shackleton Ridge,38.25004,87.14767,1967,15.63,31.84,6.83,913.6,11.87,19.47,4.88,4.556,False,20
-Shackleton Ridge,-10.09461,-77.97684,633,18.4,29.81,7.89,916.9,11.87,19.47,4.88,4.596,False,21
-Shackleton Ridge,-28.25963,-70.4155,1365,18.23,30.11,7.83,909.1,11.87,19.47,4.88,4.631,False,22
-Shackleton Ridge,17.60083,36.866,519,16.91,31.63,7.34,856.8,11.87,19.47,4.88,4.745,False,23
-Shackleton Ridge,27.26684,54.86847,790,12.92,33.53,6.06,945.8,11.87,19.47,4.88,4.795,False,24
-Shackleton Ridge,29.57943,61.19797,1513,16.96,31.69,7.46,865.3,11.87,19.47,4.88,4.796,False,25
-Shackleton Ridge,37.05079,84.56726,2648,16.5,32.49,7.21,824.8,11.87,19.47,4.88,4.917,False,26
-Shackleton Ridge,-28.21366,17.31857,320,19.28,30.08,8.41,837.8,11.87,19.47,4.88,4.94,False,27
-Shackleton Ridge,44.97743,93.15994,1891,18.49,31.5,7.97,861.3,11.87,19.47,4.88,5.066,False,28
-Shackleton Ridge,19.06861,36.81931,892,18.28,32.01,7.96,857.5,11.87,19.47,4.88,5.169,False,29
-Shackleton Ridge,44.97743,94.17892,1672,19.34,31.69,8.31,917.5,11.87,19.47,4.88,5.321,False,30
-Shackleton Ridge,36.87523,85.43518,5109,19.72,31.33,8.46,876.0,11.87,19.47,4.88,5.328,False,31
-Shackleton Ridge,27.22288,65.86029,1284,19.15,31.9,8.27,889.4,11.87,19.47,4.88,5.337,False,32
-Shackleton Ridge,27.57403,57.27448,758,19.39,31.82,8.46,882.5,11.87,19.47,4.88,5.4,False,33
-Shackleton Ridge,21.12806,17.65228,1834,20.87,31.66,8.98,941.3,11.87,19.47,4.88,5.725,False,34
-Shackleton Ridge,28.09742,56.85013,1973,20.9,32.2,9.1,940.3,11.87,19.47,4.88,5.887,False,35
-Shackleton Ridge,-15.75657,-74.04099,1520,21.31,32.26,9.34,904.8,11.87,19.47,4.88,6.028,False,36
-Shackleton Ridge,13.85541,40.10147,746,21.24,32.8,9.29,849.2,11.87,19.47,4.88,6.132,False,37
-Shackleton Ridge,14.17519,46.66306,1068,20.64,34.12,9.09,853.8,11.87,19.47,4.88,6.321,False,38
-Shackleton Ridge,24.09913,39.24042,1063,21.36,33.96,9.27,982.5,11.87,19.47,4.88,6.434,False,39
-Shackleton Ridge,26.09872,58.27423,760,21.71,35.09,9.56,908.3,11.87,19.47,4.88,6.836,False,40
+target,lat,lon,elevation_m,slope_median,slope_p90,roughness_median,relief_m,target_slope_median,target_slope_p90,target_roughness_median,match_distance,slope_match,rank,place,place_km
+Jezero Crater Rim,44.29732,95.45883,1305,2.27,5.31,0.99,217.8,2.22,5.19,0.94,0.24,True,1,"Govi-Altai, Mongolia (~56 km from Bayan-Ovoo)",55.8
+Jezero Crater Rim,40.11694,76.13937,2042,2.23,4.46,0.96,273.6,2.22,5.19,0.94,0.256,True,2,"near Artux, Xinjiang Uygur Zizhiqu, China",45.6
+Jezero Crater Rim,41.48595,80.54901,1445,1.98,4.43,0.87,217.1,2.22,5.19,0.94,0.393,True,3,"near Wensu, Xinjiang Uygur Zizhiqu, China",35.1
+Jezero Crater Rim,42.01053,84.30634,1154,2.0,3.8,0.86,215.6,2.22,5.19,0.94,0.574,True,4,"near Luntai, Xinjiang Uygur Zizhiqu, China",25.9
+Jezero Crater Rim,43.2512,98.52814,1317,1.79,4.36,0.8,212.8,2.22,5.19,0.94,0.704,True,5,"Bayanxongor, Mongolia (~154 km from Dzalaa)",154.4
+Jezero Crater Rim,28.85309,55.88608,1831,2.36,6.04,1.1,216.7,2.22,5.19,0.94,0.715,True,6,"Kerman, Iran (~59 km from ‘Ezzatābād)",58.9
+Jezero Crater Rim,29.57943,34.58359,824,2.39,6.28,1.12,217.9,2.22,5.19,0.94,0.827,True,7,"North Sinai, Egypt (~35 km from Eilat)",35.3
+Jezero Crater Rim,26.5959,40.10284,1224,2.46,6.38,1.15,219.4,2.22,5.19,0.94,0.912,True,8,"near Ash Shamli, Hail, Saudi Arabia",36.8
+Jezero Crater Rim,28.23544,62.2142,804,2.33,6.8,1.13,221.8,2.22,5.19,0.94,0.943,True,9,"Sistan-o baluchestan, Iran (~56 km from Gosht)",55.9
+Jezero Crater Rim,15.53441,25.84946,956,2.49,5.29,1.19,238.6,2.22,5.19,0.94,0.971,True,10,"Northern Darfur, Sudan (~159 km from Mellit)",159.1
+Jezero Crater Rim,21.92012,-12.08771,436,2.53,5.81,1.25,202.6,2.22,5.19,0.94,1.194,True,11,"Tiris-Zemmour, Mauritania (~99 km from Zouérat)",98.9
+Jezero Crater Rim,25.24221,8.00629,1519,2.62,6.94,1.25,234.1,2.22,5.19,0.94,1.313,True,12,"Illizi, Algeria (~145 km from Illizi)",145.5
+Jezero Crater Rim,29.42166,54.92203,2016,2.69,7.07,1.26,249.6,2.22,5.19,0.94,1.362,True,13,"Fars, Iran (~63 km from Neyrīz)",62.7
+Jezero Crater Rim,29.37619,-2.4733,579,2.88,6.7,1.3,211.6,2.22,5.19,0.94,1.453,True,14,"Bechar, Algeria (~89 km from Béni Abbès)",89.2
+Jezero Crater Rim,39.07784,-118.62625,1298,1.57,5.87,0.65,235.8,2.22,5.19,0.94,1.501,True,15,"near Fallon, Nevada, United States",45.9
+Jezero Crater Rim,40.59101,105.86151,1494,2.94,6.62,1.35,232.1,2.22,5.19,0.94,1.589,True,16,"Nei Mongol Zizhiqu, China (~129 km from Wuhai)",129.4
+Jezero Crater Rim,41.25923,103.75214,1024,2.99,6.86,1.35,210.4,2.22,5.19,0.94,1.628,True,17,"Nei Mongol Zizhiqu, China (~210 km from Sangiyn Dalay)",209.9
+Jezero Crater Rim,43.88305,92.20413,1994,3.05,7.71,1.35,231.7,2.22,5.19,0.94,1.746,True,18,"Xinjiang Uygur Zizhiqu, China (~72 km from Barkol)",71.9
+Jezero Crater Rim,26.00989,39.28986,855,2.22,10.94,1.05,257.3,2.22,5.19,0.94,1.972,False,19,"near Khaybar, Madinah, Saudi Arabia",33.0
+Jezero Crater Rim,13.71937,41.83456,232,2.96,7.0,1.47,241.2,2.22,5.19,0.94,1.975,True,20,"near Edd, Debubawi Keih Bahri, Eritrea",28.0
+Jezero Crater Rim,27.44248,60.83954,807,3.15,8.85,1.47,282.4,2.22,5.19,0.94,2.235,False,21,"near Ābādān, Sistan-o baluchestan, Iran",15.5
+Jezero Crater Rim,22.20521,45.9256,827,2.98,9.52,1.41,207.7,2.22,5.19,0.94,2.236,False,22,"Riyad, Saudi Arabia (~83 km from Laylá)",82.7
+Jezero Crater Rim,24.69444,42.55829,934,3.1,8.26,1.54,234.0,2.22,5.19,0.94,2.309,False,23,"Riyad, Saudi Arabia (~86 km from Wed Alnkil)",86.0
+Jezero Crater Rim,-19.50931,13.2399,626,2.97,10.23,1.39,226.8,2.22,5.19,0.94,2.357,False,24,"Kunene, Namibia (~59 km from Sesfontein)",58.7
+Jezero Crater Rim,41.83069,88.98651,803,3.6,7.5,1.68,219.9,2.22,5.19,0.94,2.576,True,25,"Xinjiang Uygur Zizhiqu, China (~110 km from Toqsun)",110.3
+Jezero Crater Rim,17.46726,21.9136,975,3.56,8.66,1.63,229.2,2.22,5.19,0.94,2.613,False,26,"near Fada, Ennedi, Chad",46.8
+Jezero Crater Rim,23.59168,7.3526,1101,3.34,9.54,1.59,244.4,2.22,5.19,0.94,2.657,False,27,"Tamanrasset, Algeria (~207 km from Tamanghasset)",207.4
+Jezero Crater Rim,27.44248,62.54242,1356,3.26,10.54,1.52,289.1,2.22,5.19,0.94,2.696,False,28,"near Āspīch, Sistan-o baluchestan, Iran",20.0
+Jezero Crater Rim,23.91848,10.06622,1023,3.4,8.62,1.68,257.3,2.22,5.19,0.94,2.697,False,29,"Illizi, Algeria (~92 km from Djanet)",92.1
+Jezero Crater Rim,19.15684,32.97409,395,2.85,12.22,1.36,224.2,2.22,5.19,0.94,2.8,False,30,"Nile, Sudan (~136 km from Kuraymah)",136.2
+Jezero Crater Rim,26.99307,64.60236,1305,3.7,9.49,1.71,239.8,2.22,5.19,0.94,2.918,False,31,"Balochistan, Pakistan (~50 km from Panjgur)",50.4
+Jezero Crater Rim,14.03934,40.85129,162,3.31,11.57,1.57,259.3,2.22,5.19,0.94,3.034,False,32,"near Arerti, Afar, Ethiopia",22.3
+Jezero Crater Rim,22.43388,15.18585,768,3.89,9.45,1.91,253.6,2.22,5.19,0.94,3.332,False,33,"Tibesti, Chad (~222 km from Bardaï)",222.5
+Jezero Crater Rim,19.95141,18.11508,866,4.24,9.81,2.0,241.9,2.22,5.19,0.94,3.586,False,34,"Borkou, Chad (~175 km from Zouar)",175.0
+Jezero Crater Rim,26.14311,65.71198,259,3.94,12.49,1.87,344.8,2.22,5.19,0.94,3.817,False,35,"Balochistan, Pakistan (~59 km from Awaran)",59.3
+Jezero Crater Rim,21.73654,13.12592,682,4.23,9.73,2.19,254.6,2.22,5.19,0.94,3.912,False,36,"Agadez, Niger (~340 km from Bilma)",340.0
+Jezero Crater Rim,24.00884,4.24347,723,5.05,12.54,2.34,260.4,2.22,5.19,0.94,4.644,False,37,"Tamanrasset, Algeria (~189 km from Tamanghasset)",188.6
+Jezero Crater Rim,25.19749,4.49066,924,5.03,12.06,2.42,272.4,2.22,5.19,0.94,4.684,False,38,"Tamanrasset, Algeria (~288 km from Tamanghasset)",288.0
+Jezero Crater Rim,24.82912,8.85773,1126,6.08,14.31,3.19,247.2,2.22,5.19,0.94,6.131,False,39,"Illizi, Algeria (~70 km from Djanet)",70.3
+Jezero Crater Rim,26.81672,28.49579,168,8.16,19.96,4.29,302.0,2.22,5.19,0.94,8.365,False,40,"New Valley, Egypt (~59 km from Qaşr al Farāfirah)",58.6
+Malapert Mountain,-28.02956,-68.7236,5632,16.68,26.88,6.98,1413.9,16.22,21.01,6.81,1.966,False,1,"La Rioja, Argentina (~96 km from Vinchina)",95.6
+Malapert Mountain,-25.67866,-67.88177,5149,17.68,27.26,7.44,1450.7,16.22,21.01,6.81,2.173,False,2,"Catamarca, Argentina (~64 km from Antofagasta de la Sierra)",63.7
+Malapert Mountain,-26.76278,-67.93121,4489,17.11,27.88,7.26,1209.7,16.22,21.01,6.81,2.327,False,3,"Catamarca, Argentina (~66 km from Palo Blanco)",66.0
+Malapert Mountain,-22.75339,-67.88177,5193,17.06,28.07,7.18,1222.6,16.22,21.01,6.81,2.381,False,4,"near San Pedro de Atacama, Antofagasta, Chile",37.1
+Malapert Mountain,-28.21366,-69.37454,4658,19.23,27.72,8.11,1090.8,16.22,21.01,6.81,2.568,False,5,"La Rioja, Argentina (~93 km from Vallenar)",92.5
+Malapert Mountain,-26.71863,-66.67328,4545,19.24,27.96,8.15,1302.6,16.22,21.01,6.81,2.647,False,6,"Catamarca, Argentina (~59 km from Hualfín)",58.5
+Malapert Mountain,-24.31456,-66.72272,5507,18.13,28.72,7.66,1136.5,16.22,21.01,6.81,2.698,False,7,"near San Antonio de los Cobres, Salta, Argentina",42.1
+Malapert Mountain,-25.23227,-66.88202,4505,16.94,29.33,7.23,1065.0,16.22,21.01,6.81,2.797,False,8,"Salta, Argentina (~63 km from Molinos)",63.4
+Malapert Mountain,-28.78571,-69.86893,3832,20.18,28.32,8.58,1285.3,16.22,21.01,6.81,2.954,False,9,"near Vallenar, Atacama, Chile",48.2
+Malapert Mountain,-21.6804,-67.88177,5016,19.28,29.55,8.21,1079.7,16.22,21.01,6.81,3.133,False,10,"Potosi, Bolivia (~138 km from Calama)",137.8
+Malapert Mountain,-29.96564,-70.02548,3356,19.96,29.53,8.52,1285.5,16.22,21.01,6.81,3.256,False,11,"near Paiguano, Coquimbo, Chile",47.9
+Malapert Mountain,-24.40464,-67.98065,5104,20.49,30.02,8.76,1279.1,16.22,21.01,6.81,3.504,False,12,"Salta, Argentina (~168 km from San Pedro de Atacama)",167.6
+Malapert Mountain,22.43388,59.1861,770,18.25,31.3,7.92,1262.7,16.22,21.01,6.81,3.56,False,13,"near Sur, A Sharqiya, Oman",38.2
+Malapert Mountain,-23.9988,-67.27753,4817,21.76,29.63,9.28,1300.4,16.22,21.01,6.81,3.678,False,14,"Salta, Argentina (~100 km from San Antonio de los Cobres)",100.3
+Malapert Mountain,-28.02956,-70.12985,2341,21.17,30.36,9.11,1134.1,16.22,21.01,6.81,3.755,False,15,"Atacama, Chile (~55 km from Vallenar)",55.4
+Malapert Mountain,22.99127,57.62054,1233,19.49,32.17,8.3,1160.9,16.22,21.01,6.81,3.974,False,16,"near Nizwá, A Dakhliya, Oman",11.0
+Malapert Mountain,28.28141,35.28671,1167,20.28,31.78,8.69,1175.3,16.22,21.01,6.81,3.987,False,17,"Tabuk, Saudi Arabia (~81 km from Dahab)",80.6
+Malapert Mountain,26.99307,53.51166,497,18.95,32.38,8.28,1085.6,16.22,21.01,6.81,3.992,False,18,"near Laz, Hormozgan, Iran",27.0
+Malapert Mountain,27.39859,55.06622,725,20.29,32.62,8.97,1312.5,16.22,21.01,6.81,4.279,False,19,"Hormozgan, Iran (~71 km from Bandar-e Khamīr)",71.4
+Malapert Mountain,44.97743,93.0336,1785,21.01,32.43,9.05,1376.0,16.22,21.01,6.81,4.316,False,20,"Xinjiang Uygur Zizhiqu, China (~109 km from Bor-Üdzüür)",108.6
+Malapert Mountain,38.30395,89.61411,4714,21.21,32.36,9.08,1129.5,16.22,21.01,6.81,4.322,False,21,"near Mangnai Zhen, Xinjiang Uygur Zizhiqu, China",48.1
+Malapert Mountain,-16.748,-71.1351,2469,21.35,32.39,9.29,1173.2,16.22,21.01,6.81,4.381,False,22,"near La Capilla, Moquegua, Peru",4.8
+Malapert Mountain,36.74329,84.89685,5010,20.8,33.74,9.06,1419.8,16.22,21.01,6.81,4.682,False,23,"Xinjiang Uygur Zizhiqu, China (~160 km from Qiongkulecun)",160.4
+Malapert Mountain,-29.55793,-69.5311,4240,20.04,34.34,8.68,1465.5,16.22,21.01,6.81,4.746,False,24,"San Juan, Argentina (~82 km from Rodeo)",82.1
+Malapert Mountain,27.03711,65.76141,1489,21.65,33.67,9.39,1199.2,16.22,21.01,6.81,4.807,False,25,"Balochistan, Pakistan (~83 km from Awaran)",83.3
+Malapert Mountain,38.57501,72.91214,4389,23.48,32.73,10.1,1081.1,16.22,21.01,6.81,4.916,False,26,"Badakhshoni Kuni, Tajikistan (~102 km from Murghob)",102.4
+Malapert Mountain,26.90493,54.41254,567,20.14,35.15,8.82,1224.0,16.22,21.01,6.81,5.024,False,27,"near Jenāḩ, Hormozgan, Iran",18.1
+Malapert Mountain,17.10798,38.27225,1349,23.39,33.14,10.22,1034.3,16.22,21.01,6.81,5.029,False,28,"Semenawi Keih Bahri, Eritrea (~111 km from Af’abet)",111.4
+Malapert Mountain,14.40143,40.10147,565,22.77,33.63,10.01,1256.5,16.22,21.01,6.81,5.038,False,29,"Afar, Ethiopia (~63 km from Idaga Hamus)",62.6
+Malapert Mountain,-16.07353,-72.54135,1561,21.11,34.76,9.2,1199.4,16.22,21.01,6.81,5.044,False,30,"near Aplao, Arequipa, Peru",5.1
+Malapert Mountain,37.79568,86.97464,4560,23.59,33.11,10.3,1161.3,16.22,21.01,6.81,5.067,False,31,"Xinjiang Uygur Zizhiqu, China (~105 km from Waxxari)",105.2
+Malapert Mountain,19.8636,36.77261,1156,23.1,33.55,10.07,1094.4,16.22,21.01,6.81,5.071,False,32,"Red Sea, Sudan (~54 km from Port Sudan)",53.9
+Malapert Mountain,20.34849,18.25516,1875,21.03,35.21,9.11,1237.7,16.22,21.01,6.81,5.16,False,33,"Borkou, Chad (~172 km from Bardaï)",171.7
+Malapert Mountain,-15.62171,-74.18106,1826,23.14,33.96,10.15,1270.2,16.22,21.01,6.81,5.202,False,34,"near Tocota, Arequipa, Peru",10.5
+Malapert Mountain,-11.7504,-76.90018,1320,21.42,35.23,9.44,1227.5,16.22,21.01,6.81,5.249,False,35,"near Yangas, Lima, Peru",8.5
+Malapert Mountain,27.31077,55.71991,1030,21.7,35.9,9.51,1240.0,16.22,21.01,6.81,5.492,False,36,"near Pol-e Sharqī, Hormozgan, Iran",33.6
+Malapert Mountain,29.33071,60.00046,1411,22.47,35.87,9.93,1139.9,16.22,21.01,6.81,5.628,False,37,"Sistan-o baluchestan, Iran (~59 km from Noşratābād)",58.8
+Malapert Mountain,17.7343,37.84927,872,25.04,35.58,11.03,1203.4,16.22,21.01,6.81,6.067,False,38,"Red Sea, Sudan (~78 km from Tokār)",77.9
+Malapert Mountain,28.28141,58.64639,1658,25.86,37.93,11.52,1237.3,16.22,21.01,6.81,6.897,False,39,"Kerman, Iran (~55 km from Zehkalūt)",54.7
+Malapert Mountain,22.20521,36.32904,626,24.2,39.75,10.84,1137.2,16.22,21.01,6.81,7.093,False,40,"Red Sea, Hala'ib triangle (~33 km from Hala'ib)",32.8
+Marius Hills,-16.38734,-72.44797,1083,2.54,6.23,1.2,333.5,2.62,5.24,1.19,0.332,True,1,"near Corire, Arequipa, Peru",18.4
+Marius Hills,15.80415,30.49118,590,2.6,6.05,1.29,283.1,2.62,5.24,1.19,0.431,True,2,"Northern Kordofan, Sudan (~213 km from Omdurman)",213.4
+Marius Hills,40.7743,61.74591,145,2.37,5.08,1.07,263.0,2.62,5.24,1.19,0.447,True,3,"near Birata, Chardzhou, Turkmenistan",47.6
+Marius Hills,16.56907,22.24045,663,2.16,5.91,1.08,247.1,2.62,5.24,1.19,0.461,True,4,"Ennedi, Chad (~85 km from Amdjarass)",84.6
+Marius Hills,23.68226,44.01398,932,2.45,6.84,1.23,360.0,2.62,5.24,1.19,0.554,True,5,"Riyad, Saudi Arabia (~99 km from Ad Dawādimī)",99.5
+Marius Hills,36.87523,55.79407,1289,2.23,4.68,1.04,354.8,2.62,5.24,1.19,0.577,True,6,"near Dowzeyn, Semnan, Iran",33.8
+Marius Hills,27.53019,64.55292,938,2.58,6.76,1.28,384.5,2.62,5.24,1.19,0.595,True,7,"near Washuk, Balochistan, Pakistan",33.5
+Marius Hills,16.61382,44.1774,1504,2.19,6.39,1.07,297.8,2.62,5.24,1.19,0.598,True,8,"near Al Khirāb, Amran, Yemen",13.7
+Marius Hills,24.82912,46.07391,786,2.1,5.17,1.03,260.1,2.62,5.24,1.19,0.626,True,9,"near Al ‘Uyaynah, Riyad, Saudi Arabia",32.5
+Marius Hills,25.42095,32.30804,234,2.02,5.09,1.02,267.1,2.62,5.24,1.19,0.642,True,10,"near Esna, New Valley, Egypt",28.5
+Marius Hills,24.18935,8.1546,1063,2.69,6.64,1.37,262.7,2.62,5.24,1.19,0.751,True,11,"Illizi, Algeria (~141 km from Djanet)",140.8
+Marius Hills,16.16588,37.00607,504,1.9,4.47,0.99,280.7,2.62,5.24,1.19,0.83,True,12,"Gash Barka, Eritrea (~86 km from Wagar)",85.8
+Marius Hills,17.60083,-11.50955,463,2.01,4.24,0.99,255.3,2.62,5.24,1.19,0.857,True,13,"near El Ghediya, Tagant, Mauritania",26.3
+Marius Hills,41.30463,54.93439,137,2.08,4.04,0.93,271.2,2.62,5.24,1.19,1.095,True,14,"Balkan, Turkmenistan (~166 km from Oglanly)",166.1
+Marius Hills,-15.1689,-74.97757,617,3.04,6.36,1.52,317.2,2.62,5.24,1.19,1.098,True,15,"near Minas de Marcona, Ica, Peru",15.0
+Marius Hills,23.31956,41.30035,1138,1.93,3.8,0.91,263.7,2.62,5.24,1.19,1.212,True,16,"near Mahd adh Dhahab, Madinah, Saudi Arabia",47.0
+Marius Hills,25.73311,58.82904,53,2.99,7.97,1.51,319.7,2.62,5.24,1.19,1.348,True,17,"near Līrdaf, Hormozgan, Iran",11.2
+Marius Hills,38.1594,86.51321,1458,1.85,3.66,0.88,267.3,2.62,5.24,1.19,1.367,True,18,"Xinjiang Uygur Zizhiqu, China (~85 km from Aketikandun)",84.6
+Marius Hills,25.09804,3.3316,479,3.15,7.85,1.53,272.5,2.62,5.24,1.19,1.387,True,19,"Tamanrasset, Algeria (~248 km from In Salah)",248.4
+Marius Hills,13.21722,40.33493,187,2.63,9.34,1.26,262.5,2.62,5.24,1.19,1.388,False,20,"Afar, Ethiopia (~82 km from Dolo)",81.7
+Marius Hills,19.77575,34.52316,438,2.96,8.72,1.45,349.9,2.62,5.24,1.19,1.423,False,21,"Red Sea, Sudan (~180 km from El Bauga)",180.3
+Marius Hills,20.8049,30.6546,274,3.03,8.18,1.54,273.7,2.62,5.24,1.19,1.475,True,22,"Northern, Sudan (~133 km from Karmah an Nuzul)",132.6
+Marius Hills,19.33577,17.92831,609,3.14,8.36,1.6,262.3,2.62,5.24,1.19,1.635,False,23,"Borkou, Chad (~146 km from Kirdimi)",146.4
+Marius Hills,29.71549,64.5845,1121,3.24,8.52,1.62,296.3,2.62,5.24,1.19,1.701,False,24,"Kandahar, Afghanistan (~94 km from Dalbandin)",93.6
+Marius Hills,44.25209,102.17422,1306,1.71,3.84,0.79,319.6,2.62,5.24,1.19,1.756,True,25,"near Bogd, O'vorxangai, Mongolia",46.5
+Marius Hills,24.09913,25.58441,663,3.39,7.43,1.74,260.8,2.62,5.24,1.19,1.781,True,26,"New Valley, Egypt (~233 km from Al Jawf)",233.0
+Marius Hills,45.74357,91.94321,1195,1.73,3.87,0.78,268.1,2.62,5.24,1.19,1.783,True,27,"near Bor-Üdzüür, Xovd, Mongolia",27.1
+Marius Hills,21.36869,30.90179,213,3.76,7.54,1.81,104.4,2.62,5.24,1.19,1.967,True,28,"Northern, Sudan (~68 km from Wadi Halfa)",67.9
+Marius Hills,26.55168,32.81342,225,3.33,9.6,1.67,317.1,2.62,5.24,1.19,2.051,False,29,"near Qina, Qena, Egypt",43.9
+Marius Hills,40.16103,95.06607,1179,1.67,3.38,0.73,268.5,2.62,5.24,1.19,2.086,True,30,"near Dunhuang, Gansu Sheng, China",32.5
+Marius Hills,26.72844,57.37335,203,3.76,10.41,1.79,288.1,2.62,5.24,1.19,2.455,False,31,"near Karīān, Hormozgan, Iran",29.8
+Marius Hills,22.43388,44.26117,985,3.55,10.5,1.83,336.2,2.62,5.24,1.19,2.54,False,32,"Riyad, Saudi Arabia (~178 km from Ar Rayn)",178.0
+Marius Hills,26.14311,65.6131,337,4.02,10.05,1.9,253.9,2.62,5.24,1.19,2.588,False,33,"Balochistan, Pakistan (~52 km from Awaran)",51.6
+Marius Hills,20.89731,34.21967,491,3.7,11.63,1.84,281.5,2.62,5.24,1.19,2.843,False,34,"Red Sea, Sudan (~219 km from Gebeit)",218.5
+Marius Hills,24.32457,55.9671,493,3.7,11.78,1.86,356.1,2.62,5.24,1.19,2.901,False,35,"near Al Buraymī, Al Dhahira, Oman",19.4
+Marius Hills,23.41033,33.8736,451,3.88,11.18,2.03,304.3,2.62,5.24,1.19,3.024,False,36,"Red Sea, Egypt (~125 km from Aswān)",124.7
+Marius Hills,21.87424,17.09747,1072,4.27,10.57,2.13,256.8,2.62,5.24,1.19,3.08,False,37,"near Aozou, Tibesti, Chad",34.3
+Marius Hills,23.96367,34.87335,495,4.97,11.24,2.58,336.3,2.62,5.24,1.19,3.925,False,38,"Red Sea, Egypt (~118 km from Shalātīn)",117.8
+Marius Hills,26.50745,-0.43121,233,5.85,18.42,3.11,317.2,2.62,5.24,1.19,6.103,False,39,"Adrar, Algeria (~64 km from Sali)",64.0
+Marius Hills,19.24503,14.22592,439,7.19,18.49,3.83,321.4,2.62,5.24,1.19,6.841,False,40,"Agadez, Niger (~151 km from Bilma)",151.1
+Shackleton Ridge,-24.40464,-67.93121,4508,11.96,21.62,5.0,891.5,11.87,19.47,4.88,0.724,True,1,"Salta, Argentina (~165 km from San Antonio de los Cobres)",164.5
+Shackleton Ridge,-25.50031,-66.77216,4468,14.23,24.92,6.03,883.4,11.87,19.47,4.88,2.191,False,2,"near Molinos, Catamarca, Argentina",48.5
+Shackleton Ridge,-29.69402,-69.71237,4151,11.52,26.09,4.93,866.0,11.87,19.47,4.88,2.21,False,3,"San Juan, Argentina (~80 km from Rodeo)",80.1
+Shackleton Ridge,-26.58607,-67.93121,4934,13.43,26.55,5.65,903.9,11.87,19.47,4.88,2.5,False,4,"Catamarca, Argentina (~79 km from Antofagasta de la Sierra)",78.5
+Shackleton Ridge,-28.21366,-69.42673,4407,15.8,25.55,6.67,858.5,11.87,19.47,4.88,2.781,False,5,"Atacama, Chile (~88 km from Vallenar)",87.8
+Shackleton Ridge,37.79568,73.15384,4100,13.69,27.92,5.78,901.2,11.87,19.47,4.88,2.976,False,6,"Badakhshoni Kuni, Tajikistan (~83 km from Murghob)",82.5
+Shackleton Ridge,-17.37554,-71.08841,1079,15.08,27.59,6.52,924.0,11.87,19.47,4.88,3.178,False,7,"near San Antonio, Moquegua, Peru",24.7
+Shackleton Ridge,37.32976,87.67776,5108,15.62,28.07,6.67,913.1,11.87,19.47,4.88,3.42,False,8,"Xinjiang Uygur Zizhiqu, China (~154 km from Waxxari)",153.5
+Shackleton Ridge,26.5959,58.97736,1078,16.58,28.18,7.11,862.0,11.87,19.47,4.88,3.696,False,9,"near Kotīj, Kerman, Iran",21.1
+Shackleton Ridge,37.51299,89.96017,4211,12.65,30.91,5.68,848.6,11.87,19.47,4.88,3.88,False,10,"Xinjiang Uygur Zizhiqu, China (~99 km from Mangnai Zhen)",98.5
+Shackleton Ridge,28.57849,60.2092,1702,15.68,30.02,6.78,828.5,11.87,19.47,4.88,4.009,False,11,"Sistan-o baluchestan, Iran (~54 km from Nūkābād)",53.9
+Shackleton Ridge,27.72851,61.25015,1832,14.58,30.93,6.42,868.1,11.87,19.47,4.88,4.105,False,12,"Sistan-o baluchestan, Iran (~55 km from Khāsh)",54.9
+Shackleton Ridge,-9.3095,-78.25974,439,15.49,30.76,6.85,945.9,11.87,19.47,4.88,4.224,False,13,"near Buena Vista Alta, Ancash, Peru",14.8
+Shackleton Ridge,38.89851,89.14169,2446,13.24,31.96,5.65,899.0,11.87,19.47,4.88,4.239,False,14,"near Bingtuan Sanshiliu Tuan, Xinjiang Uygur Zizhiqu, China",43.7
+Shackleton Ridge,21.36869,18.80035,1410,15.43,31.05,6.72,889.6,11.87,19.47,4.88,4.279,False,15,"Borkou, Chad (~151 km from Aozou)",151.2
+Shackleton Ridge,-8.79958,-78.4465,634,17.42,29.64,7.46,950.6,11.87,19.47,4.88,4.294,False,16,"near Guadalupito, Ancash, Peru",25.6
+Shackleton Ridge,43.70064,100.83115,2182,17.8,29.49,7.59,855.1,11.87,19.47,4.88,4.345,False,17,"O'mnogovi, Mongolia (~55 km from Urt)",54.9
+Shackleton Ridge,22.94575,58.97736,1221,16.14,31.05,7.03,954.8,11.87,19.47,4.88,4.42,False,18,"near Qurayyāt, Muscat, Oman",35.8
+Shackleton Ridge,43.47086,91.33759,1255,16.83,30.72,7.28,870.1,11.87,19.47,4.88,4.462,False,19,"near Kokdala, Xinjiang Uygur Zizhiqu, China",47.1
+Shackleton Ridge,38.25004,87.14767,1967,15.63,31.84,6.83,913.6,11.87,19.47,4.88,4.556,False,20,"Xinjiang Uygur Zizhiqu, China (~53 km from Waxxari)",52.6
+Shackleton Ridge,-10.09461,-77.97684,633,18.4,29.81,7.89,916.9,11.87,19.47,4.88,4.596,False,21,"near Huarmey, Ancash, Peru",19.4
+Shackleton Ridge,-28.25963,-70.4155,1365,18.23,30.11,7.83,909.1,11.87,19.47,4.88,4.631,False,22,"near Vallenar, Atacama, Chile",32.5
+Shackleton Ridge,17.60083,36.866,519,16.91,31.63,7.34,856.8,11.87,19.47,4.88,4.745,False,23,"Red Sea, Sudan (~129 km from Tokār)",129.4
+Shackleton Ridge,27.26684,54.86847,790,12.92,33.53,6.06,945.8,11.87,19.47,4.88,4.795,False,24,"Hormozgan, Iran (~50 km from Bastak)",50.2
+Shackleton Ridge,29.57943,61.19797,1513,16.96,31.69,7.46,865.3,11.87,19.47,4.88,4.796,False,25,"Balochistan, Pakistan (~34 km from Zahedan)",33.7
+Shackleton Ridge,37.05079,84.56726,2648,16.5,32.49,7.21,824.8,11.87,19.47,4.88,4.917,False,26,"Xinjiang Uygur Zizhiqu, China (~144 km from Qiongkulecun)",144.1
+Shackleton Ridge,-28.21366,17.31857,320,19.28,30.08,8.41,837.8,11.87,19.47,4.88,4.94,False,27,"Karas, Namibia (~19 km from Aussenkehr)",19.0
+Shackleton Ridge,44.97743,93.15994,1891,18.49,31.5,7.97,861.3,11.87,19.47,4.88,5.066,False,28,"Xinjiang Uygur Zizhiqu, China (~114 km from Bayangol)",114.2
+Shackleton Ridge,19.06861,36.81931,892,18.28,32.01,7.96,857.5,11.87,19.47,4.88,5.169,False,29,"near Jubayt, Red Sea, Sudan",12.9
+Shackleton Ridge,44.97743,94.17892,1672,19.34,31.69,8.31,917.5,11.87,19.47,4.88,5.321,False,30,"Govi-Altai, Mongolia (~66 km from Bayangol)",66.0
+Shackleton Ridge,36.87523,85.43518,5109,19.72,31.33,8.46,876.0,11.87,19.47,4.88,5.328,False,31,"Xinjiang Uygur Zizhiqu, China (~136 km from Qiongkulecun)",135.8
+Shackleton Ridge,27.22288,65.86029,1284,19.15,31.9,8.27,889.4,11.87,19.47,4.88,5.337,False,32,"Balochistan, Pakistan (~99 km from Khuzdar)",98.8
+Shackleton Ridge,27.57403,57.27448,758,19.39,31.82,8.46,882.5,11.87,19.47,4.88,5.4,False,33,"near Sarjū’īyeh, Kerman, Iran",15.6
+Shackleton Ridge,21.12806,17.65228,1834,20.87,31.66,8.98,941.3,11.87,19.47,4.88,5.725,False,34,"Tibesti, Chad (~72 km from Bardaï)",72.0
+Shackleton Ridge,28.09742,56.85013,1973,20.9,32.2,9.1,940.3,11.87,19.47,4.88,5.887,False,35,"near Dowlatābād, Hormozgan, Iran",32.1
+Shackleton Ridge,-15.75657,-74.04099,1520,21.31,32.26,9.34,904.8,11.87,19.47,4.88,6.028,False,36,"near Achanizo, Arequipa, Peru",9.6
+Shackleton Ridge,13.85541,40.10147,746,21.24,32.8,9.29,849.2,11.87,19.47,4.88,6.132,False,37,"Afar, Ethiopia (~54 km from Wik’ro)",54.2
+Shackleton Ridge,14.17519,46.66306,1068,20.64,34.12,9.09,853.8,11.87,19.47,4.88,6.321,False,38,"near Khimār, Abyan, Yemen",18.1
+Shackleton Ridge,24.09913,39.24042,1063,21.36,33.96,9.27,982.5,11.87,19.47,4.88,6.434,False,39,"Madinah, Saudi Arabia (~56 km from Madinah)",55.9
+Shackleton Ridge,26.09872,58.27423,760,21.71,35.09,9.56,908.3,11.87,19.47,4.88,6.836,False,40,"Hormozgan, Iran (~54 km from Sardasht)",54.3
